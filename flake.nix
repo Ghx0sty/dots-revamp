@@ -49,9 +49,6 @@
     # Reusable home-manager modules you might want to export
     # These are usually stuff you would upstream into home-manager
     homeManagerModules = import ./modules/home-manager;
-    # Disko configuration
-    # FIXME ALWAYS MAKE SURE YOU EDIT
-    disko = import ./disko {inherit inputs;};
 
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
@@ -62,6 +59,9 @@
         modules = [
           # > Our main nixos configuration file <
           ./nixos/configuration.nix
+          # Disko shenanigans go here?
+          disko.nixosModules.disko
+          ./disko/disko-config.nix
         ];
       };
     };
