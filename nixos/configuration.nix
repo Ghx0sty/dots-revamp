@@ -75,7 +75,7 @@
   };
 
   # TODO: Set your hostname
-  networking.hostName = "mattpc";
+  networking.hostName = "hackpc";
 
   # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
   users.users = {
