@@ -83,10 +83,8 @@
           swap = {
             size = "1G";
             content = {
-              type = "filesystem";
-              format = "btrfs";
-              mountpoint = "/";
-              extraArgs = ["-f"];
+              type = "swap";
+              discardPolicy = both;
             };
           };
         };
