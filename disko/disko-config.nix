@@ -92,11 +92,10 @@
               mountpoint = "/";
               mountoptions = [ "defaults" ];
               extraArgs = ["-f"];
-              };
             };
           };
         };
       };
     };
-  }
+  };
 }
