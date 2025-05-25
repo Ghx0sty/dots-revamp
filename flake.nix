@@ -22,7 +22,7 @@
     nixpkgs,
     home-manager,
     disko,
-    nixpkgs-unstable
+    nixpkgs-unstable,
     ...
   } @ inputs: let
     inherit (self) outputs;
