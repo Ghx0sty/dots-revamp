@@ -26,10 +26,10 @@
                 settings = {
                   # if you want to use the key for interactive login be sure there is no trailing newline
                   # for example use `echo -n "password" > /tmp/secret.key`
-                  keyFile = "/tmp/secret.key"; #
+                  # keyFile = "/tmp/secret.key";
                   allowDiscards = true;
                 };
-                additionalKeyFiles = ["/tmp/additionalSecret.key"]; #https://github.com/nix-community/disko/issues/289
+                # additionalKeyFiles = ["/tmp/additionalSecret.key"]; https://github.com/nix-community/disko/issues/289
                 content = {
                   type = "lvm_pv";
                   vg = "pool";
