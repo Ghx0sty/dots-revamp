@@ -50,7 +50,6 @@
               type = "filesystem";
               format = "btrfs";
               mountpoint = "/";
-              mountoptions = [ "defaults" ];
               extraArgs = ["-f"];
               };
             };
@@ -60,7 +59,6 @@
               type = "filesystem";
               format = "btrfs";
               mountpoint = "/home";
-              mountoptions = [ "defaults" ];
               extraArgs = ["-f"];
               };
             };
@@ -70,7 +68,6 @@
               type = "filesystem";
               format = "btrfs";
               mountpoint = "/var";
-              mountoptions = [ "defaults" ];
               extraArgs = ["-f"];
               };
             };
@@ -80,7 +77,6 @@
               type = "filesystem";
               format = "btrfs";
               mountpoint = "/tmp";
-              mountoptions = [ "defaults" ];
               extraArgs = ["-f"];
               };
             };
@@ -90,7 +86,6 @@
               type = "filesystem";
               format = "btrfs";
               mountpoint = "/";
-              mountoptions = [ "defaults" ];
               extraArgs = ["-f"];
             };
           };
