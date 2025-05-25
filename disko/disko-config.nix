@@ -45,21 +45,53 @@
         type = "lvm_vg";
         lvs = {
           root = {
-            size = "100%";
+            size = "30%";
             content = {
-              type = "btrfs";
+              type = "filesystem";
+              format = "btrfs";
+              mountpoint = "/";
+              mountoptions = [ "defaults" ];
               extraArgs = ["-f"];
-              subvolumes = {
-                "/root" = {
-                  mountpoint = "/";
-                };
-                "/var" = {
-                  mountpoint = "/var";
-                };
-                "/swap" = {
-                  mountpoint = "/.swapvol";
-                  swap.swapfile.size = "16G";
-                };
+              };
+            };
+          home = {
+            size = "30%";
+            content = {
+              type = "filesystem";
+              format = "btrfs";
+              mountpoint = "/home";
+              mountoptions = [ "defaults" ];
+              extraArgs = ["-f"];
+              };
+            };
+          var = {
+            size = "20%";
+            content = {
+              type = "filesystem";
+              format = "btrfs";
+              mountpoint = "/var";
+              mountoptions = [ "defaults" ];
+              extraArgs = ["-f"];
+              };
+            };
+          tmp = {
+            size = "10%";
+            content = {
+              type = "filesystem";
+              format = "btrfs";
+              mountpoint = "/tmp";
+              mountoptions = [ "defaults" ];
+              extraArgs = ["-f"];
+              };
+            };
+          swap = {
+            size = "1G";
+            content = {
+              type = "filesystem";
+              format = "btrfs";
+              mountpoint = "/";
+              mountoptions = [ "defaults" ];
+              extraArgs = ["-f"];
               };
             };
           };
