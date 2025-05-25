@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  etcInit = system.activationScripts.etcInit.text = ''
+  system.activationScripts.etcInit.text = ''
     echo "[flake-maintenance] Copying flake to /etc/nixos..."
     FLAKE_SRC=${toString ./.}
 
