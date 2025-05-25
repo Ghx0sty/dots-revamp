@@ -13,7 +13,7 @@
     # If you want to use modules your own flake exports (from modules/nixos):
     # outputs.nixosModules.example
     outputs.nixosModules.etcInit
-    outputs.nixosModules.githubSync
+    # outputs.nixosModules.githubSync
 
     # Or modules from other flakes (such as nixos-hardware):
     # inputs.hardware.nixosModules.common-cpu-amd
