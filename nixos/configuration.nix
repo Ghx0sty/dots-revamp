@@ -71,8 +71,8 @@
   environment = {
     systemPackages = with pkgs; [
 
-    ]
-  }
+    ];
+  };
 
   # TODO: Set your hostname
   networking.hostName = "mattpc";
