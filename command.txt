@@ -1,1 +1,1 @@
-sudo nix run 'github:nix-community/disko/latest#disko-install' --extra-experimental-features flakes --extra-experimental-features nix-command -- --flake 'github:Ghx0sty/dots-revamp/latest#hackpc' --disk main /dev/vda
+sudo nix run 'github:nix-community/disko/latest#disko-install' --extra-experimental-features flakes --extra-experimental-features nix-command -- --flake 'github:Ghx0sty/dots-revamp#hackpc' --disk main /dev/vda
