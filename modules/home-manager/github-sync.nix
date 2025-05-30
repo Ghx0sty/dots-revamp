@@ -1,16 +1,15 @@
 { config, lib, pkgs, ... }:
 
 {
-  system.activationScripts.githubSync = {
-    text = ''
-    export PATH=${pkgs.git}/bin:/run/wrapper/bin:$PATH
-    echo "Syncing /etc/nixos to GitHub..."
-    cd /etc/nixos
-    su - matt <<'EOF'
-      git add *
-      git commit -S -m "Testing automation"
-      git push
-  EOF
+  home.activation.githubSync = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    # export PATH=${pkgs.git}/bin:/run/wrapper/bin:$PATH
+    # userdir=$(getent passwd 1000 | cut -d: -f6)
+    dotsdir="$HOME/.nixdots"
+
+    echo "Syncing dots to GitHub..."
+    cd $dotsdir
+    git add *
+    git commit -m "Testing automation"
+    git push
   '';
-  };
 }
