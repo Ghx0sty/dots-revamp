@@ -6,11 +6,11 @@
     user="$USER"
 
     echo "Trying out some fun stuff!"
-    echo "My dir: $dotsdir"
-    echo "My user: $user"
     touch $dotsdir/hello.txt
+    echo "My dir: $dotsdir" >> $dotsdir/hello.txt
+    echo "My user: $user" >> $dotsdir/hello.txt
     echo "Try to check out hello.txt"
-    id
-    echo "My PATH: $PATH"
+    id >> $dotsdir/hello.txt
+    echo "My PATH: $PATH" >> $dotsdir/hello.txt
   '';
 }
