@@ -2,14 +2,13 @@
 
 {
   home.activation.githubSync = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    export PATH=${pkgs.git}/bin:/run/wrapper/bin:$PATH
-    # userdir=$(getent passwd 1000 | cut -d: -f6)
-    dotsdir="$HOME/.nixdots"
+    dotsdir="$HOME"
+    user="$USER"
 
-    echo "Syncing dots to GitHub..."
-    cd $dotsdir
-    git add *
-    git commit -m "Testing automation"
-    git push
+    echo "Trying out some fun stuff!"
+    echo "My dir: $dotsdir"
+    echo "My user: $user"
+    touch $dotsdir/hello.txt
+    echo "Try to check out hello.txt"
   '';
 }
