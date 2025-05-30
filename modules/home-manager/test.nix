@@ -10,5 +10,7 @@
     echo "My user: $user"
     touch $dotsdir/hello.txt
     echo "Try to check out hello.txt"
+    id
+    echo "My PATH: $PATH"
   '';
 }
