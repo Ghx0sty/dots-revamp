@@ -16,7 +16,7 @@
       echo "First time setup; cloning repo and putting it in the right places"
       mkdir $dotsdir
       git clone $githublink $dotsdir
-      chown -R $user $dotsdir
+      chown -R $user:users $dotsdir
       rm -rf $nixosdir
       ln -s $dotsdir $nixosdir
     fi
