@@ -61,6 +61,7 @@
 
   # Enable home-manager and git
   programs.home-manager.enable = true;
+
   programs.git = {
     enable = true;
     userName = "Ghx0sty";
@@ -70,6 +71,14 @@
   programs.ssh = {
     enable = true;
     addKeysToAgent = "yes";
+  };
+
+  programs.zsh = {
+    enable = true;
+    shellAliases = {
+      home-manager-switch = "home-manager switch --flake ~/.nixdots#matt@hackpc";
+      nixos-rebuild-switch = "nixos-rebuild switch --flake ~/.nixdots#hackpc";
+    };
   };
 
   # Nicely reload system units when changing configs
