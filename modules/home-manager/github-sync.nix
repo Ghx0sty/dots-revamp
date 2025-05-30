@@ -2,7 +2,7 @@
 
 {
   home.activation.githubSync = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    # export PATH=${pkgs.git}/bin:/run/wrapper/bin:$PATH
+    export PATH=${pkgs.git}/bin:/run/wrapper/bin:$PATH
     # userdir=$(getent passwd 1000 | cut -d: -f6)
     dotsdir="$HOME/.nixdots"
 
