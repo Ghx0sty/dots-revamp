@@ -77,7 +77,7 @@
     enable = true;
     shellAliases = {
       home-manager-switch = "home-manager switch --flake ~/.nixdots#matt@hackpc";
-      nixos-rebuild-switch = "nixos-rebuild switch --flake ~/.nixdots#hackpc";
+      nixos-rebuild-switch = "sudo nixos-rebuild switch --flake ~/.nixdots#hackpc";
     };
   };
 
