@@ -21,6 +21,9 @@
     # You can also split up your configuration and import pieces of it here:
     # ./users.nix
 
+    # enabling home-manager support here
+    inputs.home-manager.nixosModules.home-manager
+
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
   ];
@@ -95,6 +98,17 @@
       extraGroups = ["wheel"];
     };
   };
+
+  # Bit of home-manager here
+  home-manager = {
+    extraSpecialArgs = { inherit inputs outputs; };
+    users = {
+      # Import your home-manager configuration
+      matt = import ../home-manager/home.nix;
+    };
+  };
+
+
 
   # Going to put services here:
   services.openssh.enable = true;
