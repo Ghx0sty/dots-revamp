@@ -35,20 +35,14 @@
         echo "Out of date! Pulling latest changes"
         git config pull.rebase false
         git pull
-        # if [[ -z $dirty ]]; then
-          # echo "Looks like you have no more changes to apply. Updated local successfully"
-          # exit 0
-        # fi
       elif [[ $remote == $base ]]; then
         echo "All clear, pushing newest change"
-        # if [[ -z $dirty ]]; then
-          # echo "It looks like you already got a commit, I'll just push it for you"
-          # git push
-          # exit 0
-        # fi
       else
-        echo "What happened? Commits diverged somehow. Fix that yourself, you're mucking about"
-        exit 0
+        # echo "What happened? Commits diverged somehow. Fix that yourself, you're mucking about"
+        # exit 0
+	echo "Looks like you've diverged a bit. Merging all changes, please double-check your git to make sure it's all good"
+	git config pull.rebase false
+	git pull
       fi
 
       # Note for later: figure out what's happening with the logic at -n $dirty
