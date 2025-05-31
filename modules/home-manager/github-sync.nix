@@ -4,22 +4,23 @@
   home.activation.githubSync = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     export PATH=${pkgs.git}/bin:${pkgs.openssh}/bin:/run/wrapper/bin:$PATH
     dotsdir="$HOME/.nixdots"
+    cd $dotsdir
 
     set +e
-    authcheck=$(ssh -T git@github.com -o BatchMode=yes 2>&1)
+    authcheck=$(ssh -T git@github.com -o BatchMode=yes -o StrictHostKeyChecking=accept-new 2>&1)
     set -e
 
     if [[ $authcheck == *successfully* ]]; then
       echo "Syncing dots to GitHub..."
 
-      git fetch origin &>/dev/null
+      git fetch origin
 
       local=$(git rev-parse @)
       remote=$(git rev-parse @{u})
       base=$(git merge-base @ @{u})
       dirty=$(git status --porcelain)
 
-      if [[ $local == $remote ]]; then
+      if [[ $local == $remote && -z $dirty ]]; then
         echo "All up to date, skipping"
         exit 0
       elif [[ $local == $base ]]; then
