@@ -40,7 +40,7 @@
         # fi
       elif [[ $remote == $base ]]; then
         echo "All clear, pushing newest change"
-        # if [[ -z dirty ]]; then
+        # if [[ -z $dirty ]]; then
           # echo "It looks like you already got a commit, I'll just push it for you"
           # git push
           # exit 0
