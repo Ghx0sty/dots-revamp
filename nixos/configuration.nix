@@ -12,7 +12,7 @@
   imports = [
     # If you want to use modules your own flake exports (from modules/nixos):
     # outputs.nixosModules.example
-    outputs.nixosModules.pullSync
+    # outputs.nixosModules.pullSync
 
     # Or modules from other flakes (such as nixos-hardware):
     # inputs.hardware.nixosModules.common-cpu-amd
@@ -20,9 +20,6 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./users.nix
-
-    # enabling home-manager support here
-    inputs.home-manager.nixosModules.home-manager
 
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
@@ -114,6 +111,7 @@
   services.openssh.enable = true;
   programs.ssh.startAgent = true;
   programs.zsh.enable = true;
+  # programs.home-manager.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "25.05";
