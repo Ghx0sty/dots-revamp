@@ -4,6 +4,7 @@
   home.activation.pullSyncHome = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     # TODO: Remember to install git. Also, this script makes your git remote SSH based!
     export PATH=${pkgs.git}/bin:$PATH
+    echo "Testing something out rn"
 
     # FIXME: Fill this out with your own link!
     githublink="https://github.com/Ghx0sty/dots-revamp.git"
