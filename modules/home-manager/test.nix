@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  home.activation.githubSync = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+  home.activation.test = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     homedir="$HOME"
     user="$USER"
 
