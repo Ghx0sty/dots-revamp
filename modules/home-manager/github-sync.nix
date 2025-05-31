@@ -2,8 +2,22 @@
 
 {
   home.activation.githubSync = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+    # TODO: Make sure you have done the following:
+    # - Set your branch as main/origin
+    # - Made your git push remote SSH based (git remote set-url --push git@github.com:your/repo.git)
+    # - Authenticated to your Github via SSH
+    # This script relies on SSH authentication and pushing to work.
+
+    # FIXME: Install the two dependencies you see here!
+    # - git
+    # - openssh
     export PATH=${pkgs.git}/bin:${pkgs.openssh}/bin:/run/wrapper/bin:$PATH
+
+
+    # FIXME: Change this if you have your dotfiles somewhere else!
     dotsdir="$HOME/.nixdots"
+
+
     cd $dotsdir
 
     set +e
@@ -32,7 +46,7 @@
         echo "All up to date, skipping"
         exit 0
       elif [[ $local == $base ]]; then
-        echo "Out of date! Pulling latest changes"
+        echo "Out of date! Pulling latest changes and merging if necessary"
         git config pull.rebase false
         git pull
       elif [[ $remote == $base ]]; then
@@ -41,11 +55,8 @@
         # echo "What happened? Commits diverged somehow. Fix that yourself, you're mucking about"
         # exit 0
 	echo "Looks like you've diverged a bit. Merging all changes, please double-check your git to make sure it's all good"
-	git config pull.rebase false
-	git pull
+	git merge origin/main -m "Merged to main after diverging"
       fi
-
-      # Note for later: figure out what's happening with the logic at -n $dirty
 
       git push
     else
