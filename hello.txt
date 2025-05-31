@@ -1,0 +1,8 @@
+My dir: /home/matt
+My user: matt
+uid=1000(matt) gid=100(users) groups=100(users),1(wheel)
+My PATH: /nix/store/805a5wv1cyah5awij184yfad1ksmbh9f-git-2.49.0/bin:/nix/store/i0nlz4mcyxzxd96x5dv0zcy23z6xkvzy-openssh-10.0p2/bin:/run/wrapper/bin:/nix/store/1q9lw4r2mbap8rsr8cja46nap6wvrw2p-bash-interactive-5.2p37/bin:/nix/store/87fck6hm17chxjq7badb11mq036zbyv9-coreutils-9.7/bin:/nix/store/7h0sard22wnbz0jyz07w8y9y0fcs795r-diffutils-3.12/bin:/nix/store/7y59hzi3svdj1xjddjn2k7km96pifcyl-findutils-4.10.0/bin:/nix/store/sdqvwr8gc74ms9cgf56yvy409xvl8hsf-gettext-0.22.5/bin:/nix/store/gqmr3gixlddz3667ba1iyqck3c0dkpvd-gnugrep-3.11/bin:/nix/store/clbb2cvigynr235ab5zgi18dyavznlk2-gnused-4.9/bin:/nix/store/n9ch6ggimi6ri5vx62mqmzgrrkb3qfwg-jq-1.7.1-bin/bin:/nix/store/vfmnmqsnfiiqmphy7ffh2zqynsxfck1q-ncurses-6.5/bin:/nix/store/clfkfybsfi0ihp7hjkz4dkgphj7yy0l4-nix-2.28.3/bin
+My dir: /home/matt
+My user: matt
+uid=1000(matt) gid=100(users) groups=100(users),1(wheel)
+My PATH: /nix/store/805a5wv1cyah5awij184yfad1ksmbh9f-git-2.49.0/bin:/nix/store/i0nlz4mcyxzxd96x5dv0zcy23z6xkvzy-openssh-10.0p2/bin:/run/wrapper/bin:/nix/store/1q9lw4r2mbap8rsr8cja46nap6wvrw2p-bash-interactive-5.2p37/bin:/nix/store/87fck6hm17chxjq7badb11mq036zbyv9-coreutils-9.7/bin:/nix/store/7h0sard22wnbz0jyz07w8y9y0fcs795r-diffutils-3.12/bin:/nix/store/7y59hzi3svdj1xjddjn2k7km96pifcyl-findutils-4.10.0/bin:/nix/store/sdqvwr8gc74ms9cgf56yvy409xvl8hsf-gettext-0.22.5/bin:/nix/store/gqmr3gixlddz3667ba1iyqck3c0dkpvd-gnugrep-3.11/bin:/nix/store/clbb2cvigynr235ab5zgi18dyavznlk2-gnused-4.9/bin:/nix/store/n9ch6ggimi6ri5vx62mqmzgrrkb3qfwg-jq-1.7.1-bin/bin:/nix/store/vfmnmqsnfiiqmphy7ffh2zqynsxfck1q-ncurses-6.5/bin:/nix/store/clfkfybsfi0ihp7hjkz4dkgphj7yy0l4-nix-2.28.3/bin
