@@ -54,8 +54,8 @@
       else
         # echo "What happened? Commits diverged somehow. Fix that yourself, you're mucking about"
         # exit 0
-	echo "Looks like you've diverged a bit. Merging all changes, please double-check your git to make sure it's all good"
-	git merge origin/main -m "Merged to main after diverging"
+        echo "Looks like you've diverged a bit. Merging all changes, please double-check your git to make sure it's all good"
+        git merge origin/main -m "Merged to main after diverging"
       fi
 
       git push
