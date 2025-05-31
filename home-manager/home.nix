@@ -12,6 +12,7 @@
   imports = [
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example
+    outputs.homeManagerModules.pullSyncHome
     outputs.homeManagerModules.githubSync
     # outputs.homeManagerModules.test
 
