@@ -8,7 +8,6 @@
 
     set +e
     authcheck=$(ssh -T git@github.com -o BatchMode=yes -o StrictHostKeyChecking=accept-new 2>&1)
-    set -e
 
     if [[ $authcheck == *successfully* ]]; then
       echo "Syncing dots to GitHub..."
