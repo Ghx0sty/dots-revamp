@@ -4,5 +4,5 @@
   # List your module files here
   # my-module = import ./my-module.nix;
   githubSync = import ./github-sync.nix;
-  test = import ./test.nix;
+  pullSyncHome = import ./pull-sync-home.nix;
 }
