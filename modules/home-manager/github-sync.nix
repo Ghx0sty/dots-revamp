@@ -11,6 +11,7 @@
       echo "You're authed, nice!"
     else
       echo "You're not authenticated to Github!"
+    fi
     # echo "Syncing dots to GitHub..."
     # git add *
     # git commit -m "Testing automation"
