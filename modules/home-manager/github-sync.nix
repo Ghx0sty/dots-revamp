@@ -2,14 +2,18 @@
 
 {
   home.activation.githubSync = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    export PATH=${pkgs.git}/bin:/run/wrapper/bin:$PATH
-    # userdir=$(getent passwd 1000 | cut -d: -f6)
+    export PATH=${pkgs.git}/bin:${pkgs.ssh}/bin:/run/wrapper/bin:$PATH
     dotsdir="$HOME/.nixdots"
 
-    echo "Syncing dots to GitHub..."
-    cd $dotsdir
-    git add *
-    git commit -m "Testing automation"
-    git push
+    authcheck=$(ssh -T git@github.com -o BatchMode=yes 2>&1)
+
+    if [[ $authcheck == *Successfully* ]]; then
+      echo "You're authed, nice!"
+    else
+      echo "You're not authenticated to Github!"
+    # echo "Syncing dots to GitHub..."
+    # git add *
+    # git commit -m "Testing automation"
+    # git push
   '';
 }
