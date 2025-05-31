@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  home.activation.pullSyncHome = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+  home.activation.pullSyncHome = ''
     # TODO: Remember to install git. Also, this script makes your git remote SSH based!
     export PATH=${pkgs.git}/bin:$PATH
     echo "Testing something out rn"
