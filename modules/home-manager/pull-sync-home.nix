@@ -9,7 +9,6 @@
     githubssh="git@github.com:Ghx0sty/dots-revamp.git"
 
     dotsdir="$HOME/.nixdots"
-    nixosdir="/etc/nixos"
     if [[ ! -d $dotsdir ]]; then
       echo "First time setup; cloning repo and putting it in the right places"
       mkdir $dotsdir
