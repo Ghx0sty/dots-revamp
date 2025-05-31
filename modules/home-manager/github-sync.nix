@@ -8,10 +8,10 @@
 
     authcheck=$(ssh -T git@github.com -o BatchMode=yes 2>&1)
 
-    if [[ $authcheck == *Successfully* ]]; then
-      echo "You're authed, nice!"
+    if [[ $authcheck == *successfully* ]]; then
+      touch /home/matt/yes
     else
-      echo "You're not authenticated to Github!"
+      touch /home/matt/no
     fi
     # echo "Syncing dots to GitHub..."
     # git add *
