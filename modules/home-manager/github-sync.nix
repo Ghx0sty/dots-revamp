@@ -12,13 +12,6 @@
     if [[ $authcheck == *successfully* ]]; then
       echo "Syncing dots to GitHub..."
 
-      git fetch origin
-
-      local=$(git rev-parse @)
-      remote=$(git rev-parse @{u})
-      base=$(git merge-base @ @{u})
-      dirty=$(git status --porcelain)
-
       if [[ -z $dirty ]]; then
         echo "Tree is not dirty, no commit made"
       else
@@ -26,6 +19,13 @@
         git add .
         git commit -m "Automated push"
       fi
+
+      git fetch origin
+
+      local=$(git rev-parse @)
+      remote=$(git rev-parse @{u})
+      base=$(git merge-base @ @{u})
+      dirty=$(git status --porcelain)
 
       if [[ $local == $remote ]]; then
         echo "All up to date, skipping"
