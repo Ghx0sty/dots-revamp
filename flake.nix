@@ -63,7 +63,7 @@
           disko.nixosModules.disko
           ./disko/disko-config.nix
 	  # Adding home-manager support here
-	  home-manager.nixosModules.home-manager
+	  # home-manager.nixosModules.home-manager
         ];
       };
     };
