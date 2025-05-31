@@ -5,14 +5,16 @@
     export PATH=${pkgs.git}/bin:${pkgs.openssh}/bin:/run/wrapper/bin:$PATH
     dotsdir="$HOME/.nixdots"
 
+    set +e
     authcheck=$(ssh -T git@github.com -o BatchMode=yes 2>&1)
+    set -e
 
     echo $authcheck
 
     if [[ $authcheck == *successfully* ]]; then
-      touch /home/matt/yes
+      echo "Works"
     else
-      touch /home/matt/no
+      echo "You aren't authenticated to Github yet!"
     fi
     # echo "Syncing dots to GitHub..."
     # git add *
