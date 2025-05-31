@@ -8,6 +8,9 @@
     # - Authenticated to your Github via SSH
     # This script relies on SSH authentication and pushing to work.
 
+    # FIXME: Install the two dependencies you see here!
+    # - git
+    # - openssh
     export PATH=${pkgs.git}/bin:${pkgs.openssh}/bin:/run/wrapper/bin:$PATH
 
 
