@@ -59,6 +59,7 @@
   home.packages = with pkgs; [ 
     vim
     neofetch
+    neovim
   ];
 
   # Enable home-manager and git
