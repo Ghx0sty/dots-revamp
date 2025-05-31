@@ -9,16 +9,35 @@
     authcheck=$(ssh -T git@github.com -o BatchMode=yes 2>&1)
     set -e
 
-    echo $authcheck
-
     if [[ $authcheck == *successfully* ]]; then
-      echo "Works"
+      echo "Syncing dots to GitHub..."
+
+      git fetch origin &>/dev/null
+
+      local=$(git rev-parse @)
+      remote=$(git rev-parse @{u})
+      base=$(git merge-base @ @{u})
+
+      if [[ $local == $remote ]]; then
+        echo "All up to date, skipping"
+        exit 0
+      elif [[ $local == $base ]]; then
+        echo "Out of date! Pulling latest changes and merging"
+        git config pull.rebase false
+        git pull
+      elif [[ $remote == $base ]]; then
+        echo "Pushing onto repo"
+      else
+        echo "What happened? Commits diverged somehow. Fix that yourself, you're mucking about"
+        exit 0
+      fi
+
+      git add .
+      git commit -m "Testing automation"
+      git push
     else
       echo "You aren't authenticated to Github yet!"
+      echo $authcheck
     fi
-    # echo "Syncing dots to GitHub..."
-    # git add *
-    # git commit -m "Testing automation"
-    # git push
-  '';
+ '';
 }
