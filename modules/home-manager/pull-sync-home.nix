@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  home.activation.githubSync = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+  home.activation.pullSyncHome = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     export PATH=${pkgs.git}/bin:$PATH
 
     # FIXME: Fill this out with your own link!
