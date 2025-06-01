@@ -88,9 +88,26 @@
   };
 
   programs.keychain = {
-  enable = true;
-  keys = [ "githubkey" ];  # or your actual key file name
+    enable = true;
+    keys = [ "githubkey" ];  # or your actual key file name
   };
+
+  # Here goes the Hyprland:
+  wayland.windowManager.hyprland.settings = {
+    enable = true;
+    settings = {
+      env = [
+        "TERMINAL,alacritty"
+      ];
+      monitor = [
+        "eDP-1,1920x1080@60,0x0,1"
+      ];
+      bind = [
+        "SUPER, Return, exec, $TERMINAL"
+      ];
+    };
+  };
+
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = true;
