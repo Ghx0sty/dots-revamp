@@ -86,6 +86,11 @@
     };
   };
 
+  programs.keychain = {
+  enable = true;
+  keys = [ "githubkey" ];  # or your actual key file name
+  };
+
   # Nicely reload system units when changing configs
   systemd.user.startServices = true;
 
