@@ -93,7 +93,7 @@
   };
 
   # Here goes the Hyprland:
-  wayland.windowManager.hyprland.settings = {
+  wayland.windowManager.hyprland = {
     enable = true;
     settings = {
       "$terminal" = "alacritty";
