@@ -80,8 +80,8 @@
   programs.zsh = {
     enable = true;
     shellAliases = {
-      home-manager-switch = "home-manager switch --flake ~/.nixdots#matt@hackpc";
-      nixos-rebuild-switch = "sudo nixos-rebuild switch --flake ~/.nixdots#hackpc";
+      home-sync = "home-manager switch --flake ~/.nixdots#matt@hackpc";
+      nixos-switch = "sudo nixos-rebuild switch --flake ~/.nixdots#hackpc";
       nixos-sync = "sudo nixos-rebuild switch --flake ~/.nixdots#hackpc && home-manager switch --flake ~/.nixdots#matt@hackpc";
       flake-update = "nix flake update --flake ~/.nixdots";
     };
