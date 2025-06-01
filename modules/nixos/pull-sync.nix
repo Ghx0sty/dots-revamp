@@ -19,6 +19,7 @@
       echo "First time setup; cloning repo and putting it in the right places"
       mkdir $dotsdir
       git clone $githublink $dotsdir
+      cd $dotsdir
       git remote set-url --push origin $githubssh
       chown -R $user:users $dotsdir
       rm -rf $nixosdir
