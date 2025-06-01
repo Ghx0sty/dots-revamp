@@ -45,7 +45,7 @@
         type = "lvm_vg";
         lvs = {
           root = {
-            size = "40%";
+            size = "45%";
             content = {
               type = "filesystem";
               format = "btrfs";
@@ -81,7 +81,7 @@
               };
             };
           swap = {
-            size = "1G";
+            size = "5%";
             content = {
               type = "swap";
               discardPolicy = "both";
