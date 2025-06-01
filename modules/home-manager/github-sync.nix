@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  home.activation.githubSync = ''
+  home.activation.githubSync = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     # TODO: Make sure you have done the following:
     # - Set your branch as main/origin
     # - Made your git push remote SSH based (git remote set-url --push git@github.com:your/repo.git)
