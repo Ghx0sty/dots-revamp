@@ -75,6 +75,9 @@
       git
       openssh
       zsh
+      kdePackages.sddm
+      hyprland
+      alacritty
     ];
   };
 
@@ -105,12 +108,18 @@
     # };
   # };
 
-
-
   # Going to put services here:
   services.openssh.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    wayland.enable = true;
+  };
+  services.displayManager.defaultSession = "hyprland";
+
+  # And programs here:
   programs.ssh.startAgent = true;
   programs.zsh.enable = true;
+  programs.hyprland.enable = true;
   # programs.home-manager.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
