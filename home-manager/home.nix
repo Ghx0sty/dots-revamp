@@ -102,6 +102,8 @@
       ];
       bind = [
         "SUPER, q, exec, $terminal"
+        "SUPER, c, killactive"
+        "SUPER, m, exit"
       ];
     };
   };
