@@ -60,6 +60,7 @@
     vim
     neofetch
     neovim
+    keychain
   ];
 
   # Enable home-manager and git
