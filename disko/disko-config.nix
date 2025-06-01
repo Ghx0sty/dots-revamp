@@ -45,7 +45,7 @@
         type = "lvm_vg";
         lvs = {
           root = {
-            size = "30%";
+            size = "40%";
             content = {
               type = "filesystem";
               format = "btrfs";
@@ -54,7 +54,7 @@
               };
             };
           home = {
-            size = "30%";
+            size = "20%";
             content = {
               type = "filesystem";
               format = "btrfs";
