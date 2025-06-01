@@ -12,7 +12,7 @@
   imports = [
     # If you want to use modules your own flake exports (from modules/home-manager):
     # outputs.homeManagerModules.example
-    outputs.homeManagerModules.pullSyncHome
+    # outputs.homeManagerModules.pullSyncHome
     outputs.homeManagerModules.githubSync
     # outputs.homeManagerModules.test
 
@@ -82,6 +82,7 @@
       home-manager-switch = "home-manager switch --flake ~/.nixdots#matt@hackpc";
       nixos-rebuild-switch = "sudo nixos-rebuild switch --flake ~/.nixdots#hackpc";
       nixos-sync = "sudo nixos-rebuild switch --flake ~/.nixdots#hackpc && home-manager switch --flake ~/.nixdots#matt@hackpc";
+      flake-update = "nix flake update --flake ~/.nixdots";
     };
   };
 
