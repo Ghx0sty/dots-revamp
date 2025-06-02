@@ -115,15 +115,15 @@
     settings = {
       font = {
         normal = {
-          family = "Roboto Mono";
+          family = "RobotoMono Nerd Font";
           style = "Regular";
         };
         bold = {
-          family = "Roboto Mono";
+          family = "RobotoMono Nerd Font";
           style = "Bold";
         };
         italic = {
-          family = "Roboto Mono";
+          family = "RobotoMono Nerd Font";
           style = "Italic";
         };
         size = 11.0;
