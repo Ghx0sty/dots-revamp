@@ -110,6 +110,26 @@
     };
   };
 
+  programs.alacritty = {
+    enable = true;
+    settings = {
+      font = {
+        normal = {
+          family = "Roboto Mono";
+          style = "Regular";
+        };
+        bold = {
+          family = "Roboto Mono";
+          style = "Bold";
+        };
+        italic = {
+          family = "Roboto Mono";
+          style = "Italic";
+        };
+        size = 11.0;
+      };
+    };
+  };
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = true;
