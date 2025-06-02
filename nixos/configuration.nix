@@ -78,9 +78,12 @@
       kdePackages.sddm
       hyprland
       alacritty
-      nerd-fonts.roboto-mono
     ];
   };
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.roboto-mono
+  ];
 
   # TODO: Set your hostname
   networking.hostName = "hackpc";
