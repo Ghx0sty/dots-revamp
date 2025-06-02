@@ -106,6 +106,11 @@
         "$mainmod, q, exec, $terminal"
         "$mainmod, c, killactive"
         "$mainmod, m, exit"
+
+        "$mainmod, left, movefocus, l"
+        "$mainmod, right, movefocus, r"
+        "$mainmod, up, movefocus, u"
+        "$mainmod, down, movefocus, d"
       ];
     };
   };
