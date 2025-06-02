@@ -126,7 +126,7 @@
           family = "RobotoMono Nerd Font";
           style = "Italic";
         };
-        size = 16.0;
+        size = 14.0;
       };
     };
   };
