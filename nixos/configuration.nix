@@ -78,6 +78,7 @@
       kdePackages.sddm
       hyprland
       alacritty
+      nerd-fonts.roboto-mono
     ];
   };
 
