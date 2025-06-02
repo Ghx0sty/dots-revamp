@@ -97,13 +97,16 @@
     enable = true;
     settings = {
       "$terminal" = "alacritty";
+      
+      "$mainmod" = "ALT";
+      "$secondmod" = "SUPER";
       monitor = [
         "Virtual-1,1920x1080@60,0x0,1"
       ];
       bind = [
-        "SUPER, q, exec, $terminal"
-        "SUPER, c, killactive"
-        "SUPER, m, exit"
+        "$mainmod, q, exec, $terminal"
+        "$mainmod, c, killactive"
+        "$mainmod, m, exit"
       ];
     };
   };
