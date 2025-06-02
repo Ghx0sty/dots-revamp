@@ -111,6 +111,12 @@
         "$mainmod, right, movefocus, r"
         "$mainmod, up, movefocus, u"
         "$mainmod, down, movefocus, d"
+ 
+        "$secondmod, left, movewindow, l"
+        "$secondmod, right, movewindow, r"
+        "$secondmod, up, movewindow, u"
+        "$secondmod, down, movewindow, d"
+ 
       ];
     };
   };
