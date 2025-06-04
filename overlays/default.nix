@@ -11,7 +11,6 @@
       postPatch = ''
         substituteInPlace ./metadata.desktop \
         --replace "astronaut.conf" "black_hole.conf"
-        ${oldAttrs.postPatch or ""}
       '';
     });
   };
