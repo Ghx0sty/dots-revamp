@@ -139,7 +139,7 @@
   [X11]
   EnableHiDPI=true
   '';
-  environment.etc."sddm/Xsetup".text = ''
+  environment.etc."sddm/scripts/Xsetup".text = ''
   ${pkgs.xorg.xrandr}/bin/xrandr --output Virtual-1 --mode 1920x1080
   '';
 
