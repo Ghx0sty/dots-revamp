@@ -135,6 +135,9 @@
   environment.etc."sddm.conf.d/10-wayland.conf".text = ''
   [General]
   EnableHiDPI=true
+
+  [X11]
+  EnableHiDPI=true
   '';
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
