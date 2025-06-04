@@ -140,7 +140,7 @@
   EnableHiDPI=true
   '';
   environment.etc."sddm/scripts/Xsetup".text = ''
-  ${pkgs.xorg.xrandr}/bin/xrandr --output Virtual-1 --mode 1920x1080
+  ${pkgs.xorg.xrandr}/bin/xrandr -s 1920x1080
   '';
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
