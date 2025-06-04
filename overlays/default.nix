@@ -10,7 +10,7 @@
     sddm-astronaut = prev.sddm-astronaut.overrideAttrs (oldAttrs: {
       postPatch = ''
         substituteInPlace metadata.desktop \
-        --replace-warn "*astronaut.conf*" "*black_hole.conf*"
+        --replace-warn Name=sddm-astronaut-theme BLOOP 
       '';
     });
   };
