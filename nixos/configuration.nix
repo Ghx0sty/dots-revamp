@@ -79,6 +79,7 @@
       hyprland
       alacritty
       xorg.xrandr
+      sddm-astronaut
     ];
   };
 
@@ -120,7 +121,7 @@
     displayManager = {
       sddm = {
         enable = true;
-        theme = "breeze";
+        theme = "sddm-astronaut-theme";
       };
       defaultSession = "hyprland";
       setupCommands = "${pkgs.xorg.xrandr}/bin/xrandr -s 1920x1080";
