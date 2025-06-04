@@ -134,6 +134,7 @@
   environment.etc."sddm.conf.d/10-wayland.conf".text = ''
   [Wayland]
   EnableHiDPI=true
+  CompositorCommand=kwin_wayland --drm --no-lockscreen --no-global-shortcuts --locale1
 
   [X11]
   EnableHiDPI=true
