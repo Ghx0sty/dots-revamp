@@ -133,14 +133,10 @@
   boot.kernelParams = [ "video=Virtual-1:1920x1080@60" ];
   environment.etc."sddm.conf.d/10-wayland.conf".text = ''
   [Wayland]
-  EnableHiDPI=true
   CompositorCommand=kwin_wayland --drm --no-lockscreen --no-global-shortcuts --locale1
 
-  [X11]
-  EnableHiDPI=true
-
   [General]
-  GreeterEnvironment=QT_SCREEN_SCALE_FACTORS=1,QT_FONT_DPI=192
+  EnableHiDPI=true
   '';
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
