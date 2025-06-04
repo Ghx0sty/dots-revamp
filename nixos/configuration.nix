@@ -124,9 +124,9 @@
     enable = true;
     theme = "sddm-astronaut-theme";
     package = pkgs.kdePackages.sddm;
-    # extraPackages = with pkgs; [ 
-      # sddm-astronaut
-    # ];
+    extraPackages = with pkgs; [ 
+      sddm-astronaut
+    ];
   };
 
   # And programs here:
