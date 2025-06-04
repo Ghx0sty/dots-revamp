@@ -129,13 +129,6 @@
     ];
   };
 
-  # SDDM theme config here:
-  environment.etc."sddm/themes/sddm-astronaut-theme/metadata.desktop".text = builtins.replaceInFile {
-    file = "${pkgs.sddm-theme-astronaut}/share/sddm/themes/sddm-astronaut-theme/metadata.desktop";
-    search = "ConfigFile=Themes/astronaut.conf";
-    replace = "ConfigFile=Themes/pixel_sakura.conf";
-  };
-
   # And programs here:
   programs.ssh.startAgent = true;
   programs.zsh.enable = true;
