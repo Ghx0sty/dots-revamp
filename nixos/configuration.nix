@@ -73,14 +73,12 @@
     systemPackages = with pkgs; [
       home-manager
       git
-      openssh
+      # openssh
       zsh
-      # kdePackages.sddm
-      # kdePackages.qtmultimedia
-      hyprland
+      # hyprland
       alacritty
       xorg.xrandr
-      # sddm-astronaut
+      sddm-astronaut
     ];
   };
 
@@ -120,15 +118,18 @@
   services.xserver = {
     enable = true;
     displayManager = {
-      sddm = {
-        enable = true;
-        theme = "sddm-astronaut-theme";
-      };
       defaultSession = "hyprland";
       setupCommands = "${pkgs.xorg.xrandr}/bin/xrandr -s 1920x1080";
     };
   };
-  
+  services.displayManager.sddm = {
+    enable = true;
+    theme = "sddm-astronaut-theme";
+    # extraPackages = with pkgs; [ 
+      # kdePackages.qtmultimedia
+    # ];
+  };
+
   # And programs here:
   programs.ssh.startAgent = true;
   programs.zsh.enable = true;
