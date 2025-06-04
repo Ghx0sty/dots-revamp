@@ -115,10 +115,11 @@
 
   # Going to put services here:
   services.openssh.enable = true;
+  services.xserver.enable = true;
   services.displayManager = {
     sddm = {
       enable = true;
-      wayland.enable = true;
+      #wayland.enable = true;
       theme = "breeze";
     };
     defaultSession = "hyprland";
@@ -132,9 +133,6 @@
   # Weird fix for SDDM resolution
   boot.kernelParams = [ "video=Virtual-1:1920x1080@60" ];
   environment.etc."sddm.conf.d/10-wayland.conf".text = ''
-  [Wayland]
-  CompositorCommand=kwin_wayland --drm --no-lockscreen --no-global-shortcuts --locale1
-
   [General]
   EnableHiDPI=true
   '';
