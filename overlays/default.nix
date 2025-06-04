@@ -9,8 +9,9 @@
   modifications = final: prev: {
     sddm-astronaut = prev.sddm-astronaut.overrideAttrs (oldAttrs: {
       postPatch = ''
-        substituteInPlace ./metadata.desktop \
-        --replace "astronaut.conf" "black_hole.conf"
+        # substituteInPlace share/sddm/themes/sddm-astronaut-theme/metadata.desktop \
+        # --replace "astronaut.conf" "black_hole.conf"
+        find . -name metadata.desktop
       '';
     });
   };
