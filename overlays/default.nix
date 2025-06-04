@@ -9,7 +9,7 @@
   modifications = final: prev: {
     sddm-astronaut = prev.sddm-astronaut.overrideAttrs (oldAttrs: {
       postPatch = ''
-        substituteInPlace metadata.desktop \
+        substituteInPlace ./metadata.desktop \
         --replace "ConfigFile=Themes/astronaut.conf" "ConfigFile=Themes/black_hole.conf"
         ${oldAttrs.postPatch or ""}
       '';
