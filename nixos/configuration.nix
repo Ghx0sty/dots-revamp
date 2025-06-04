@@ -75,13 +75,12 @@
       git
       openssh
       zsh
-      kdePackages.sddm
+      # kdePackages.sddm
       # kdePackages.qtmultimedia
-      libsForQt5.qt5.qtmultimedia
       hyprland
       alacritty
       xorg.xrandr
-      sddm-astronaut
+      # sddm-astronaut
     ];
   };
 
@@ -129,7 +128,7 @@
       setupCommands = "${pkgs.xorg.xrandr}/bin/xrandr -s 1920x1080";
     };
   };
-
+  
   # And programs here:
   programs.ssh.startAgent = true;
   programs.zsh.enable = true;
