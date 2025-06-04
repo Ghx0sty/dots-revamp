@@ -76,7 +76,8 @@
       openssh
       zsh
       kdePackages.sddm
-      kdePackages.qtmultimedia
+      # kdePackages.qtmultimedia
+      libsForQt5.qt5.qtmultimedia
       hyprland
       alacritty
       xorg.xrandr
