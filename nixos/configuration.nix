@@ -116,7 +116,7 @@
   # Going to put services here:
   services.openssh.enable = true;
   services.xserver = {
-    enabled = true;
+    enable = true;
     displayManager = {
       sddm = {
         enable = true;
