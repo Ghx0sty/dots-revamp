@@ -11,7 +11,7 @@
       postPatch = ''
         # substituteInPlace share/sddm/themes/sddm-astronaut-theme/metadata.desktop \
         # --replace "astronaut.conf" "black_hole.conf"
-        find . -name metadata.desktop
+        find . -name metadata.desktop > /tmp/hello.txt
       '';
     });
   };
