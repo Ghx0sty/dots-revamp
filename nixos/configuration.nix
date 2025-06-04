@@ -115,15 +115,16 @@
 
   # Going to put services here:
   services.openssh.enable = true;
-  services.xserver.enable = true;
-  services.xserver.displayManager.setupCommands = "${pkgs.xorg.xrandr}/bin/xrandr -s 1920x1080";
-  services.displayManager = {
-    sddm = {
-      enable = true;
-      #wayland.enable = true;
-      theme = "breeze";
+  services.xserver = {
+    enabled = true;
+    displayManager = {
+      sddm = {
+        enable = true;
+        theme = "breeze";
+      };
+      defaultSession = "hyprland";
+      setupCommands = "${pkgs.xorg.xrandr}/bin/xrandr -s 1920x1080";
     };
-    defaultSession = "hyprland";
   };
 
   # And programs here:
