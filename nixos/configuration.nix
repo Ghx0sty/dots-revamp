@@ -122,9 +122,6 @@
       theme = "elarun";
     };
     defaultSession = "hyprland";
-    setupCommands = ''
-      ${pkgs.xorg.xrandr}/bin/xrandr --output Virtual-1 --mode 1920x1080
-    '';
   };
 
   # And programs here:
@@ -134,6 +131,9 @@
 
   # Weird fix for SDDM resolution
   boot.kernelParams = [ "video=Virtual-1:1920x1080@60" ];
+  environment.etc."sddm/Xsetup".text = ''
+  ${pkgs.xorg.xrandr}/bin/xrandr --output Virtual-1 --mode 1920x1080
+  '';
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "25.05";
