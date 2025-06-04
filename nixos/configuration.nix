@@ -78,6 +78,7 @@
       kdePackages.sddm
       hyprland
       alacritty
+      xorg.xrandr
     ];
   };
 
@@ -114,12 +115,17 @@
 
   # Going to put services here:
   services.openssh.enable = true;
-  services.displayManager.sddm = {
-    enable = true;
-    wayland.enable = true;
-    theme = "elarun";
+  services.displayManager = {
+    sddm = {
+      enable = true;
+      wayland.enable = true;
+      theme = "elarun";
+    };
+    defaultSession = "hyprland";
+    setupCommands = ''
+      ${pkgs.xorg.xrandr}/bin/xrandr --output Virtual-1 --mode 1920x1080
+    '';
   };
-  services.displayManager.defaultSession = "hyprland";
 
   # And programs here:
   programs.ssh.startAgent = true;
