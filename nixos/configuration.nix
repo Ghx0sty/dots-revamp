@@ -73,12 +73,9 @@
     systemPackages = with pkgs; [
       home-manager
       git
-      # openssh
       zsh
-      # hyprland
       alacritty
       xorg.xrandr
-      sddm-astronaut
     ];
   };
 
@@ -125,9 +122,10 @@
   services.displayManager.sddm = {
     enable = true;
     theme = "sddm-astronaut-theme";
-    # extraPackages = with pkgs; [ 
-      # kdePackages.qtmultimedia
-    # ];
+    package = pkgs.kdePackages.sddm;
+    extraPackages = with pkgs; [ 
+      sddm-astronaut
+    ];
   };
 
   # And programs here:
