@@ -139,7 +139,7 @@
   EnableHiDPI=true
 
   [General]
-  GreeterEnvironment=QT_SCREEN_SCALE_FACTORS=2,QT_FONT_DPI=192
+  GreeterEnvironment=QT_SCREEN_SCALE_FACTORS=1,QT_FONT_DPI=192
   '';
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
