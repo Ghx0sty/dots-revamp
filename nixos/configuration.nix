@@ -116,6 +116,7 @@
   # Going to put services here:
   services.openssh.enable = true;
   services.xserver.enable = true;
+  services.xserver.displayManager.setupCommands = "${pkgs.xorg.xrandr}/bin/xrandr -s 1920x1080";
   services.displayManager = {
     sddm = {
       enable = true;
@@ -132,16 +133,6 @@
 
   # Weird fix for SDDM resolution
   boot.kernelParams = [ "video=Virtual-1:1920x1080@60" ];
-  environment.etc."sddm.conf.d/10-wayland.conf".text = ''
-  [General]
-  EnableHiDPI=true
-
-  [X11]
-  EnableHiDPI=true
-  '';
-  environment.etc."sddm/scripts/Xsetup".text = ''
-  ${pkgs.xorg.xrandr}/bin/xrandr -s 1920x1080
-  '';
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "25.05";
