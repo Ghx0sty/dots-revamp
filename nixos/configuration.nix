@@ -119,7 +119,7 @@
     sddm = {
       enable = true;
       wayland.enable = true;
-      theme = "elarun";
+      theme = "breeze";
     };
     defaultSession = "hyprland";
   };
@@ -131,8 +131,15 @@
 
   # Weird fix for SDDM resolution
   boot.kernelParams = [ "video=Virtual-1:1920x1080@60" ];
-  environment.etc."sddm/Xsetup".text = ''
-  ${pkgs.xorg.xrandr}/bin/xrandr --output Virtual-1 --mode 1920x1080
+  environment.etc."sddm.conf.d/10-wayland.conf".text = ''
+  [Wayland]
+  EnableHiDPI=true
+
+  [X11]
+  EnableHiDPI=true
+
+  [General]
+  GreeterEnvironment=QT_SCREEN_SCALE_FACTORS=2,QT_FONT_DPI=192
   '';
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
