@@ -80,6 +80,7 @@
       xorg.xrandr
       breeze-hacked-cursor-theme
       plymouth
+      plymouth-proxzima-theme
     ];
   };
 

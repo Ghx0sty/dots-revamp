@@ -23,7 +23,8 @@
     };
     plymouth  = {
       enable = true;
-      theme = "fade-in";
+      theme = "proxzima";
+      themePackages = [ pkgs.plymouth-proxzima-theme ];
     };
     initrd = {
       systemd.enable = true;
