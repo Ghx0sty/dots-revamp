@@ -71,8 +71,8 @@
 
   environment = {
     systemPackages = with pkgs; [
-      (callPackage "${pkgs.path}/pkgs/data/themes/sddm-astronaut" { embeddedTheme = "black_hole"; } )
-      (callPackage "${pkgs.path}/pkgs/by-name/sl/sleek-grub-theme/package.nix" { withStyle = "orange"; withBanner = "Hello world!"; } )
+      sddm-astronaut-patched
+      sleek-grub-theme-patched
       home-manager
       git
       zsh
@@ -127,7 +127,7 @@
     theme = "sddm-astronaut-theme";
     package = pkgs.kdePackages.sddm;
     extraPackages = with pkgs; [ 
-      sddm-astronaut
+      sddm-astronaut-patched
     ];
     settings = {
       General = {

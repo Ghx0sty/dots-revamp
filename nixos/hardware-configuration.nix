@@ -12,7 +12,7 @@
       grub = {
         enable = true;
         # Pizzazz
-        theme = "${pkgs.sleek-grub-theme}";
+        theme = "${pkgs.sleek-grub-theme-patched}";
         efiSupport = true;
         # efiInstallAsRemovable = true;
         devices = [ "nodev" ];
