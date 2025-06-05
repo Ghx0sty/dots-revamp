@@ -7,12 +7,12 @@
   # You can change versions, add patches, set compilation flags, anything really.
   # https://nixos.wiki/wiki/Overlays
   modifications = final: prev: {
-    sddm-astronaut = prev.sddm-astronaut.overrideAttrs (oldAttrs: {
-      name = "sddm-astronaut-patched";
-      postFixup = ''
-        substituteInPlace $out/share/sddm/themes/sddm-astronaut-theme/metadata.desktop --replace-fail "astronaut.conf" "pixel_sakura.conf"
-      '';
-    });
+    # sddm-astronaut = prev.sddm-astronaut.overrideAttrs (oldAttrs: {
+      # name = "sddm-astronaut-patched";
+      # postFixup = ''
+      #   substituteInPlace $out/share/sddm/themes/sddm-astronaut-theme/metadata.desktop --replace-fail "astronaut.conf" "black_hole.conf"
+      # '';
+    # });
   };
 
   # When applied, the unstable nixpkgs set (declared in the flake inputs) will

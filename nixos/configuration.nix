@@ -71,12 +71,13 @@
 
   environment = {
     systemPackages = with pkgs; [
-      sddm-astronaut
+      (callPackage "${pkgs.path}/pkgs/data/themes/sddm-astronaut" { embeddedTheme = "black_hole"; } )
       home-manager
       git
       zsh
       alacritty
       xorg.xrandr
+      breeze-hacked-cursor-theme
     ];
   };
 
@@ -127,6 +128,11 @@
     extraPackages = with pkgs; [ 
       sddm-astronaut
     ];
+    settings = {
+      General = {
+        CursorTheme = "Breeze_Hacked";
+      };
+    };
   };
 
   # And programs here:
