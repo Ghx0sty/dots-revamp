@@ -72,6 +72,7 @@
   environment = {
     systemPackages = with pkgs; [
       (callPackage "${pkgs.path}/pkgs/data/themes/sddm-astronaut" { embeddedTheme = "black_hole"; } )
+      (callPackage "${pkgs.path}/pkgs/by-name/sl/sleek-grub-theme/package.nix" { withStyle = "orange"; withBanner = "Hello world!"; } )
       home-manager
       git
       zsh
