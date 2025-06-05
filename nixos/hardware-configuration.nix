@@ -7,7 +7,7 @@
 
   boot = {
     # Fixes resolution
-    kernelParams = [ "video=Virtual-1:1920x1080@60" ];
+    kernelParams = [ "video=Virtual-1:1920x1080@60" "quiet" "splash" ];
     loader = {
       grub = {
         enable = true;
@@ -22,6 +22,10 @@
         efiSysMountPoint = "/boot";
         canTouchEfiVariables = true;
       };
+    };
+    plymouth  = {
+      enable = true;
+      theme = "spinner";
     };
   };
   

@@ -79,6 +79,7 @@
       alacritty
       xorg.xrandr
       breeze-hacked-cursor-theme
+      plymouth
     ];
   };
 
