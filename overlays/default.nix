@@ -10,7 +10,7 @@
     sddm-astronaut = prev.sddm-astronaut.overrideAttrs (oldAttrs: {
       postInstall = ''
         substituteInPlace $out/share/sddm/themes/sddm-astronaut-theme/metadata.desktop \
-        --replace 'ConfigFile=Themes/astronaut.conf' 'ConfigFile=Themes/black_hole.conf'
+        --replace astronaut.conf black_hole.conf
       '';
     });
   };
