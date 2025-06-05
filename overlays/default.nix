@@ -10,7 +10,7 @@
     sddm-astronaut = prev.sddm-astronaut.overrideAttrs (oldAttrs: {
       name = "sddm-astronaut-patched";
       postFixup = ''
-        substituteInPlace $out/share/sddm/themes/sddm-astronaut-theme/metadata.desktop --replace-fail "astronaut.conf" "black_hole.conf"
+        substituteInPlace $out/share/sddm/themes/sddm-astronaut-theme/metadata.desktop --replace-fail "astronaut.conf" "pixel_sakura.conf"
       '';
     });
   };
