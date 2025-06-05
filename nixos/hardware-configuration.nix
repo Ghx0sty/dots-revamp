@@ -3,8 +3,8 @@
   pkgs,
   ...
 }: {
-  # boot.loader.systemd-boot.enable = true;
-  
+  boot.loader.systemd-boot.enable = false;
+
   boot = {
     # Fixes resolution
     kernelParams = [ "video=Virtual-1:1920x1080@60" ];
@@ -14,10 +14,12 @@
         # Pizzazz
         theme = "${pkgs.sleek-grub-theme}";
         efiSupport = true;
+        # efiInstallAsRemovable = true;
         devices = [ "nodev" ];
       };
       efi = {
-        efiSysMountPoint = "/boot/EFI";
+        efiSysMountPoint = "/boot";
+        canTouchEfiVariables = true;
       };
     };
   };
