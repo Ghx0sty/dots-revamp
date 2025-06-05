@@ -8,10 +8,11 @@
   # https://nixos.wiki/wiki/Overlays
   modifications = final: prev: {
     sddm-astronaut-patched = prev.sddm-astronaut.overrideAttrs (oldAttrs: {
+      name = "sddm-astronaut-patched";
       postInstall = ''
-        substituteInPlace $out/share/sddm/themes/sddm-astronaut-theme/metadata.desktop \
-        --replace astronaut.conf black_hole.conf
-      '';
+        substituteInPlace $out/share/sddm/themes/sddm-astronaut-theme/metadata.desktop --replace-fail "astronaut.conf" "black_hole.conf"
+        exit 1
+      '' + (oldAttrs.postInstall or "");
     });
   };
 
