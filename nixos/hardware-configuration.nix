@@ -3,8 +3,6 @@
   pkgs,
   ...
 }: {
-  boot.loader.systemd-boot.enable = false;
-
   boot = {
     # Fixes resolution
     kernelParams = [ "video=Virtual-1:1920x1080@60" "quiet" "splash" ];
@@ -25,7 +23,10 @@
     };
     plymouth  = {
       enable = true;
-      theme = "spinner";
+      theme = "fade-in";
+    };
+    initrd = {
+      systemd.enable = true;
     };
   };
   
