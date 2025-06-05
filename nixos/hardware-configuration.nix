@@ -16,6 +16,9 @@
         efiSupport = true;
         # efiInstallAsRemovable = true;
         devices = [ "nodev" ];
+        extraConfig = ''
+          set gfxmode=1920x1080
+        '';
       };
       efi = {
         efiSysMountPoint = "/boot";
