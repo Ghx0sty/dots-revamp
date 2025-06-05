@@ -118,22 +118,24 @@
   services.xserver = {
     enable = true;
     displayManager = {
-      defaultSession = "hyprland";
       setupCommands = "${pkgs.xorg.xrandr}/bin/xrandr -s 1920x1080";
     };
   };
-  services.displayManager.sddm = {
-    enable = true;
-    theme = "sddm-astronaut-theme";
-    package = pkgs.kdePackages.sddm;
-    extraPackages = with pkgs; [ 
-      sddm-astronaut-patched
-    ];
-    settings = {
-      General = {
-        CursorTheme = "Breeze_Hacked";
+  services.displayManager = {
+    sddm = {
+      enable = true;
+      theme = "sddm-astronaut-theme";
+      package = pkgs.kdePackages.sddm;
+      extraPackages = with pkgs; [ 
+        sddm-astronaut-patched
+      ];
+      settings = {
+        General = {
+          CursorTheme = "Breeze_Hacked";
+        };
       };
     };
+    defaultSession = "hyprland";
   };
 
   # And programs here:
