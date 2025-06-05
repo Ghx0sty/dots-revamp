@@ -71,7 +71,7 @@
 
   environment = {
     systemPackages = with pkgs; [
-      sddm-astronaut
+      sddm-astronaut-patched
       home-manager
       git
       zsh
@@ -125,7 +125,7 @@
     theme = "sddm-astronaut-theme";
     package = pkgs.kdePackages.sddm;
     extraPackages = with pkgs; [ 
-      sddm-astronaut
+      sddm-astronaut-patched
     ];
   };
 

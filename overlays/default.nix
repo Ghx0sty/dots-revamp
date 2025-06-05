@@ -7,7 +7,7 @@
   # You can change versions, add patches, set compilation flags, anything really.
   # https://nixos.wiki/wiki/Overlays
   modifications = final: prev: {
-    sddm-astronaut = prev.sddm-astronaut.overrideAttrs (oldAttrs: {
+    sddm-astronaut-patched = prev.sddm-astronaut.overrideAttrs (oldAttrs: {
       postInstall = ''
         substituteInPlace $out/share/sddm/themes/sddm-astronaut-theme/metadata.desktop \
         --replace astronaut.conf black_hole.conf
