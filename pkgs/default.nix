@@ -3,5 +3,5 @@
 pkgs: {
   # example = pkgs.callPackage ./example { };
   sddm-astronaut-patched = pkgs.callPackage "${pkgs.path}/pkgs/data/themes/sddm-astronaut" { embeddedTheme = "black_hole"; };
-  sleek-grub-theme-patched = pkgs.callPackage "${pkgs.path}/pkgs/by-name/sl/sleek-grub-theme/package.nix" { withStyle = "orange"; withBanner = "Hello world!"; };
+  sleek-grub-theme-patched = pkgs.callPackage "${pkgs.path}/pkgs/by-name/sl/sleek-grub-theme/package.nix" { withStyle = "dark"; withBanner = "Hello world!"; };
 }
