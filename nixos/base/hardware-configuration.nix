@@ -10,7 +10,7 @@
       grub = {
         enable = true;
         # Pizzazz
-        theme = "${pkgs.sleek-grub-theme-patched}";
+        theme = "${pkgs.catppuccin-grub-patched}";
         efiSupport = true;
         # efiInstallAsRemovable = true;
         devices = [ "nodev" ];
@@ -23,8 +23,8 @@
     };
     plymouth  = {
       enable = true;
-      theme = "proxzima";
-      themePackages = [ pkgs.plymouth-proxzima-theme ];
+      theme = "catppuccin-macchiato";
+      themePackages = [ pkgs.catppuccin-plymouth-patched ];
     };
     initrd = {
       systemd.enable = true;

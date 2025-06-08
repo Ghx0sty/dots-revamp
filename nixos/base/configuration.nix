@@ -27,11 +27,11 @@
 
   nixpkgs = {
     # You can add overlays here
-    overlays = [
+    # overlays = [
       # Add overlays your own flake exports (from overlays and pkgs dir):
-      outputs.overlays.additions
-      outputs.overlays.modifications
-      outputs.overlays.unstable-packages
+      # outputs.overlays.additions
+      # outputs.overlays.modifications
+      # outputs.overlays.unstable-packages
 
       # You can also add overlays exported from other flakes:
       # neovim-nightly-overlay.overlays.default
@@ -42,7 +42,7 @@
       #     patches = [ ./change-hello-to-hi.patch ];
       #   });
       # })
-    ];
+    # ];
     # Configure your nixpkgs instance
     config = {
       # Disable if you don't want unfree packages
@@ -72,7 +72,8 @@
   environment = {
     systemPackages = with pkgs; [
       sddm-astronaut-patched
-      sleek-grub-theme-patched
+      # sleek-grub-theme-patched
+      catppuccin-plymouth-patched
       home-manager
       git
       zsh
@@ -80,7 +81,7 @@
       xorg.xrandr
       breeze-hacked-cursor-theme
       plymouth
-      plymouth-proxzima-theme
+      catppuccin-plymouth-patched
     ];
   };
 
@@ -111,7 +112,7 @@
     extraSpecialArgs = { inherit inputs outputs; };
     users = {
       # Import your home-manager configuration
-      matt = import ../home-manager/home.nix;
+      matt = import ../../home-manager/base/home.nix;
     };
   };
 
