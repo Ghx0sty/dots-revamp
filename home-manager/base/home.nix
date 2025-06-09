@@ -99,8 +99,8 @@
         "$secondmod, up, movewindow, u"
         "$secondmod, down, movewindow, d"
 
-        "CTRL ALT, l, workspace, e+1"
-        "CTRL ALT, k, workspace, e-1"
+        "CTRL ALT, right, workspace, r+1"
+        "CTRL ALT, left, workspace, r-1"
 
         "$secondmod, 1, workspace, 1"
         "$secondmod, 2, workspace, 2"
