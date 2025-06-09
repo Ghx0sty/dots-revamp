@@ -57,6 +57,7 @@
       hackpc = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
+          # Nixpkgs injection for overlays
           { nixpkgs = {
             overlays = [ 
               self.overlays.unstable-packages 
@@ -84,6 +85,7 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [
+          # Nixpkgs injection for overlays
           { nixpkgs = {
             overlays = [ 
               self.overlays.unstable-packages 

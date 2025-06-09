@@ -73,6 +73,8 @@
     enable = true;
     settings = {
       "$terminal" = "alacritty";
+      "$launcher" = "wofi";
+      "$browser" = "librewolf";
       
       "$mainmod" = "ALT";
       "$secondmod" = "SUPER";
@@ -81,6 +83,8 @@
       ];
       bind = [
         "$mainmod, q, exec, $terminal"
+        "$secondmod, a, exec, $launcher"
+        "$secondmod, b, exec, $browser"
         "$mainmod, c, killactive"
         "$mainmod, m, exit"
 
@@ -93,7 +97,8 @@
         "$secondmod, right, movewindow, r"
         "$secondmod, up, movewindow, u"
         "$secondmod, down, movewindow, d"
- 
+
+
       ];
     };
   };

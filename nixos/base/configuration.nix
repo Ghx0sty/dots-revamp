@@ -48,7 +48,9 @@
 
   environment = {
     systemPackages = with pkgs; [
+      librewolf
       sddm-astronaut-patched
+      wofi
       # sleek-grub-theme-patched
       catppuccin-plymouth-patched
       home-manager
