@@ -105,8 +105,8 @@
         "$secondmod, up, movewindow, u"
         "$secondmod, down, movewindow, d"
 
-        "CTRL+ALT, right, workspace, e+1"
-        "CTRL+ALT, left, workspace, e-1"
+        "CONTROL+ALT, right, workspace, e+1"
+        "CONTROL+ALT, left, workspace, e-1"
       ];
     };
   };
