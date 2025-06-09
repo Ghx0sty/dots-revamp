@@ -108,7 +108,7 @@
         "$secondmod, 5, workspace, 5"
       ];
       bindr = [
-        "$secondmod, a, exec, $launcher-kill || $launcher-start"
+        "SUPER, SUPER_L, exec, $launcher-kill || $launcher-start"
       ];
     };
   };
