@@ -84,7 +84,7 @@
       ];
       bind = [
         "$mainmod, q, exec, $terminal"
-        "$secondmod, a, exec, $launcher-kill || $launcher-start"
+        "$secondmod, a, exec, killall wofi || $launcher-start"
         "$secondmod, b, exec, $browser"
         "$mainmod, c, killactive"
         "$mainmod, m, exit"
