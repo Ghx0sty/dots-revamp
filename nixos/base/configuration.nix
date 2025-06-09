@@ -52,6 +52,7 @@
       librewolf
       sddm-astronaut-patched
       wofi
+      j4-dmenu-desktop
       # sleek-grub-theme-patched
       catppuccin-plymouth-patched
       home-manager
