@@ -104,9 +104,10 @@
         "$secondmod, right, movewindow, r"
         "$secondmod, up, movewindow, u"
         "$secondmod, down, movewindow, d"
+        "CTRL ALT, a, exec, $terminal"
 
-        "Control_L&ALT, right, workspace, e+1"
-        "Control_L&ALT, left, workspace, e-1"
+        "CTRL ALT, right, workspace, e+1"
+        "CTRL ALT, left, workspace, e-1"
       ];
     };
   };
