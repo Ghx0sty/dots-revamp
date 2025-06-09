@@ -73,7 +73,7 @@
     enable = true;
     settings = {
       "$terminal" = "alacritty";
-      "$launcher" = "wofi --dmenu --gtk-dark --allow-images";
+      "$launcher" = "wofi --show drun --gtk-dark --allow-images";
       "$browser" = "librewolf";
       
       "$mainmod" = "ALT";
