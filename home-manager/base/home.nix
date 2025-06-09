@@ -79,6 +79,12 @@
       
       "$mainmod" = "ALT";
       "$secondmod" = "SUPER";
+      workspace = [
+        "1"
+        "2"
+        "3"
+        "4"
+      ];
       monitor = [
         "Virtual-1,1920x1080@60,0x0,1"
       ];
