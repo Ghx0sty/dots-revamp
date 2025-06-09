@@ -73,7 +73,7 @@
     enable = true;
     settings = {
       "$terminal" = "alacritty";
-      "$launcher" = "wofi";
+      "$launcher" = "wofi -drun";
       "$browser" = "librewolf";
       
       "$mainmod" = "ALT";
@@ -97,8 +97,6 @@
         "$secondmod, right, movewindow, r"
         "$secondmod, up, movewindow, u"
         "$secondmod, down, movewindow, d"
-
-
       ];
     };
   };
