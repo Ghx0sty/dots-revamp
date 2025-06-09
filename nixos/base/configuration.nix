@@ -48,6 +48,7 @@
 
   environment = {
     systemPackages = with pkgs; [
+      psmisc
       librewolf
       sddm-astronaut-patched
       wofi
