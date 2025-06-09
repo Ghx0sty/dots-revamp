@@ -84,7 +84,7 @@
       ];
       bind = [
         "$mainmod, q, exec, $terminal"
-        "$secondmod, a, exec, killall wofi || $launcher-start"
+        "$secondmod, a, exec, $launcher-kill || $launcher-start"
         "$secondmod, b, exec, $browser"
         "$mainmod, c, killactive"
         "$mainmod, m, exit"
@@ -98,6 +98,9 @@
         "$secondmod, right, movewindow, r"
         "$secondmod, up, movewindow, u"
         "$secondmod, down, movewindow, d"
+
+        "CTRL+$mainmod, right, workspace, e+1"
+        "CTRL+$mainmod, left, workspace, e-1"
       ];
     };
   };
