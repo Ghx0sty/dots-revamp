@@ -73,7 +73,7 @@
     enable = true;
     settings = {
       "$terminal" = "alacritty";
-      "$launcher-kill" = "pgrep wofi >/dev/null 2>&1 && killall wofi"; 
+      "$launcher-kill" = "killall wofi"; 
       "$launcher-start" = "wofi --show drun --gtk-dark --allow-images --fork";
       "$browser" = "librewolf";
       
