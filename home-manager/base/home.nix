@@ -99,14 +99,14 @@
         "$secondmod, up, movewindow, u"
         "$secondmod, down, movewindow, d"
 
-        "CTRL ALT, right, workspace, e+1"
-        "CTRL ALT, left, workspace, e-1"
+        "CTRL ALT, l, workspace, e+1"
+        "CTRL ALT, k, workspace, e-1"
 
-        "$mainmod, 1, workspace, 1"
-        "$mainmod, 2, workspace, 2"
-        "$mainmod, 3, workspace, 3"
-        "$mainmod, 4, workspace, 4"
-        "$mainmod, 5, workspace, 5"
+        "$secondmod, 1, workspace, 1"
+        "$secondmod, 2, workspace, 2"
+        "$secondmod, 3, workspace, 3"
+        "$secondmod, 4, workspace, 4"
+        "$secondmod, 5, workspace, 5"
       ];
     };
   };
