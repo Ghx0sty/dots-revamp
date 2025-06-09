@@ -74,7 +74,7 @@
     settings = {
       "$terminal" = "alacritty";
       "$launcher-kill" = "pkill wofi"; 
-      "$launcher-start" = "j4-dmenu-desktop --dmenu='wofi --dmenu --prompt Launch --gtk-dark --allow-images --fork'";
+      "$launcher-start" = "j4-dmenu-desktop --dmenu='wofi --show drun --dmenu --gtk-dark --allow-images --fork'";
       "$browser" = "librewolf";
       
       "$mainmod" = "ALT";
