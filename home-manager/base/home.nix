@@ -73,8 +73,8 @@
     enable = true;
     settings = {
       "$terminal" = "alacritty";
-      "$launcher-kill" = "pkill wofi"; 
-      "$launcher-start" = "j4-dmenu-desktop --dmenu='wofi --show drun --dmenu --gtk-dark --allow-images --fork'";
+      "$launcher-kill" = "pkill fuzzel"; 
+      "$launcher-start" = "j4-dmenu-desktop --dmenu='fuzzel --dmenu'";
       "$browser" = "librewolf";
       
       "$mainmod" = "ALT";

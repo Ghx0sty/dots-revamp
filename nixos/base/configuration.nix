@@ -51,6 +51,7 @@
       psmisc
       librewolf
       sddm-astronaut-patched
+      fuzzel
       wofi
       j4-dmenu-desktop
       # sleek-grub-theme-patched
