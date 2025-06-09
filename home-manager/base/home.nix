@@ -73,7 +73,7 @@
     enable = true;
     settings = {
       "$terminal" = "alacritty";
-      "$launcher-kill" = "pkill -f wofi"; 
+      "$launcher-kill" = "pgrep wofi >/dev/null 2>&1 && killall wofi"; 
       "$launcher-start" = "wofi --show drun --gtk-dark --allow-images";
       "$browser" = "librewolf";
       
@@ -108,7 +108,7 @@
         "$secondmod, 5, workspace, 5"
       ];
       bindr = [
-        "SUPER, SUPER_L, exec, killall wofi || $launcher-start"
+        "SUPER, SUPER_L, exec, $launcher-kill || $launcher-start"
       ];
     };
   };
