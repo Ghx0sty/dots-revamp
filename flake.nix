@@ -42,7 +42,7 @@
     # Other options beside 'alejandra' include 'nixpkgs-fmt'
 
     # Your custom packages and modifications, exported as overlays
-    overlays.default = import ./overlays {inherit inputs;};
+    overlays = import ./overlays {inherit inputs;};
     # Reusable nixos modules you might want to export
     # These are usually stuff you would upstream into nixpkgs
     nixosModules = import ./modules/nixos;
@@ -57,6 +57,14 @@
       hackpc = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
+          { nixpkgs = {
+            overlays = [ 
+              self.overlays.unstable-packages 
+              self.overlays.additions
+              # self.overlays.modifications
+            ];
+            config.allowUnfree = true;
+          };}
           # > Our main nixos configuration file <
           ./nixos/base/configuration.nix
           # Disko shenanigans go here?
@@ -76,6 +84,14 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [
+          { nixpkgs = {
+            overlays = [ 
+              self.overlays.unstable-packages 
+              self.overlays.additions
+              # self.overlays.modifications
+            ];
+            config.allowUnfree = true;
+          };}
           # > Our main home-manager configuration file <
           ./home-manager/base/home.nix
         ];
