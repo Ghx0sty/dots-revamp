@@ -108,7 +108,7 @@
         "$secondmod, 5, workspace, 5"
       ];
       bindr = [
-        "SUPER, SUPER_L, exec, pkill -x '$launcher-start' || $launcher-start"
+        "SUPER, SUPER_L, exec, killall wofi || $launcher-start"
       ];
     };
   };
