@@ -74,7 +74,7 @@
     settings = {
       "$terminal" = "alacritty";
       "$launcher-kill" = "pgrep wofi >/dev/null 2>&1 && killall wofi"; 
-      "$launcher-start" = "wofi --show drun --gtk-dark --allow-images";
+      "$launcher-start" = "wofi --show drun --gtk-dark --allow-images --fork";
       "$browser" = "librewolf";
       
       "$mainmod" = "ALT";
