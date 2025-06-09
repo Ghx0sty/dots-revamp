@@ -73,7 +73,7 @@
     enable = true;
     settings = {
       "$terminal" = "alacritty";
-      "$launcher-kill" = "pkill j4-dmenu-desktop"; 
+      "$launcher-kill" = "pkill wofi"; 
       "$launcher-start" = "j4-dmenu-desktop --dmenu='wofi --show drun --gtk-dark --allow-images --fork'";
       "$browser" = "librewolf";
       
