@@ -73,7 +73,7 @@
     enable = true;
     settings = {
       "$terminal" = "alacritty";
-      "$launcher-kill" = "killall Wofi"; 
+      "$launcher-kill" = "killall wofi"; 
       "$launcher-start" = "wofi --show drun --gtk-dark --allow-images";
       "$browser" = "librewolf";
       
@@ -105,8 +105,8 @@
         "$secondmod, up, movewindow, u"
         "$secondmod, down, movewindow, d"
 
-        "CTRL&ALT, right, workspace, e+1"
-        "CTRL&ALT, left, workspace, e-1"
+        "Control_L&ALT, right, workspace, e+1"
+        "Control_L&ALT, left, workspace, e-1"
       ];
     };
   };
