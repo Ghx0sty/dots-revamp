@@ -74,7 +74,7 @@
     settings = {
       "$terminal" = "alacritty";
       "$launcher-kill" = "pkill ulauncher"; 
-      "$launcher-start" = "ulauncher-toggle";
+      "$launcher-start" = "ulauncher";
       "$browser" = "librewolf";
       
       "$mainmod" = "ALT";
@@ -108,7 +108,7 @@
         "$secondmod, 5, workspace, 5"
       ];
       bindr = [
-        "SUPER, SUPER_L, exec, $launcher-start"
+        "SUPER, SUPER_L, exec, $launcher-kill || $launcher-start"
       ];
     };
   };
