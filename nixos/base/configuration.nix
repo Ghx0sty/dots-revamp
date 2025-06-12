@@ -49,6 +49,7 @@
   environment = {
     systemPackages = with pkgs; [
       psmisc
+      adwaita-icon-theme
       librewolf
       sddm-astronaut-patched
       fuzzel
