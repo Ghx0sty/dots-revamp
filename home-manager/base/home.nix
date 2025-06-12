@@ -73,8 +73,8 @@
     enable = true;
     settings = {
       "$terminal" = "alacritty";
-      "$launcher-kill" = "pkill fuzzel"; 
-      "$launcher-start" = "j4-dmenu-desktop --dmenu='fuzzel --dmenu'";
+      "$launcher-kill" = "pkill ulauncher"; 
+      "$launcher-start" = "ulauncher-toggle";
       "$browser" = "librewolf";
       
       "$mainmod" = "ALT";
@@ -108,7 +108,7 @@
         "$secondmod, 5, workspace, 5"
       ];
       bindr = [
-        "SUPER, SUPER_L, exec, $launcher-kill || $launcher-start"
+        "SUPER, SUPER_L, exec, $launcher-start"
       ];
     };
   };

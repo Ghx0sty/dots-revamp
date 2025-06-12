@@ -52,9 +52,10 @@
       adwaita-icon-theme
       librewolf
       sddm-astronaut-patched
-      fuzzel
-      wofi
-      j4-dmenu-desktop
+      ulauncher
+      # fuzzel
+      # wofi
+      # j4-dmenu-desktop
       # sleek-grub-theme-patched
       catppuccin-plymouth-patched
       home-manager
