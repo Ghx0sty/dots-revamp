@@ -18,66 +18,32 @@
     # inputs.hardware.nixosModules.common-ssd
 
     # Hardware configuration for current host:
-    ./hardware-configuration.nix
+    ./hardware-configuration-template.nix
     
     # Disko for current host:
     inputs.disko.nixosModules.disko
-    ../../disko/mattpc/disko-mattpc.nix
+    ../../disko/template/disko-template.nix
   ];
 
   # Nixpkgs configurations moved to flake.nix
-
-  nix = let
-    flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs;
-  in {
-    settings = {
-      # Enable flakes and new 'nix' command
-      experimental-features = "nix-command flakes";
-      # Opinionated: disable global registry
-      flake-registry = "";
-      # Workaround for https://github.com/NixOS/nix/issues/9574
-      nix-path = config.nix.nixPath;
-    };
-    # Opinionated: disable channels
-    channel.enable = false;
-
-    # Opinionated: make flake registry and nix path match flake inputs
-    registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
-    nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
-  };
+  
+  # Configure nix.settings for host using nix.settings = {}
 
   environment = {
     systemPackages = with pkgs; [
-      psmisc
-      adwaita-icon-theme
-      librewolf
-      sddm-astronaut-patched
-      fuzzel
-      wofi
-      j4-dmenu-desktop
-      # sleek-grub-theme-patched
-      catppuccin-plymouth-patched
-      home-manager
-      git
-      zsh
-      alacritty
-      xorg.xrandr
-      breeze-hacked-cursor-theme
-      plymouth
-      catppuccin-plymouth-patched
+    # Drop your host packages here
+    nano
+    htop
+    steam
     ];
   };
-
-  fonts.packages = with pkgs; [
-    nerd-fonts.roboto-mono
-  ];
-
-  # TODO: Set your hostname
-  networking.hostName = "hackpc";
+ 
+  # TODO: Set a hostname
+  networking.hostName = "template";
 
   # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
   users.users = {
-    # FIXME: Replace with your username
+    # TODO: Replace with your username
     matt = {
       # TODO: You can set an initial password for your user.
       # If you do, you can skip setting a root password by passing '--no-root-passwd' to nixos-install.
