@@ -19,25 +19,25 @@
 
     # Hardware configuration for current host:
     ./hardware-configuration-template.nix
-    
+
     # Disko for current host:
     inputs.disko.nixosModules.disko
     ../../disko/template/disko-template.nix
   ];
 
   # Nixpkgs configurations moved to flake.nix
-  
+
   # Configure nix.settings for host using nix.settings = {}
 
   environment = {
     systemPackages = with pkgs; [
-    # Drop your host packages here
-    nano
-    htop
-    steam
+      # Drop your host packages here
+      nano
+      htop
+      steam
     ];
   };
- 
+
   # TODO: Set a hostname
   networking.hostName = "template";
 
@@ -58,7 +58,7 @@
 
   # Bit of home-manager here
   home-manager = {
-    extraSpecialArgs = { inherit inputs outputs; };
+    extraSpecialArgs = {inherit inputs outputs;};
     users = {
       # Import your home-manager configuration
       matt = import ../../home-manager/base/home.nix;
@@ -66,34 +66,38 @@
   };
 
   # Going to put services here:
-  services.openssh.enable = true;
-  services.xserver = {
-    enable = true;
-    displayManager = {
-      setupCommands = "${pkgs.xorg.xrandr}/bin/xrandr -s 1920x1080";
-    };
-  };
-  services.displayManager = {
-    sddm = {
+  services = {
+    openssh.enable = true;
+    xserver = {
       enable = true;
-      theme = "sddm-astronaut-theme";
-      package = pkgs.kdePackages.sddm;
-      extraPackages = with pkgs; [ 
-        sddm-astronaut-patched
-      ];
-      settings = {
-        General = {
-          CursorTheme = "Breeze_Hacked";
-        };
+      displayManager = {
+        setupCommands = "${pkgs.xorg.xrandr}/bin/xrandr -s 1920x1080";
       };
     };
-    defaultSession = "hyprland";
+    displayManager = {
+      sddm = {
+        enable = true;
+        theme = "sddm-astronaut-theme";
+        package = pkgs.kdePackages.sddm;
+        extraPackages = with pkgs; [
+          sddm-astronaut-patched
+        ];
+        settings = {
+          General = {
+            CursorTheme = "Breeze_Hacked";
+          };
+        };
+      };
+      defaultSession = "hyprland";
+    };
   };
 
   # And programs here:
-  programs.ssh.startAgent = true;
-  programs.zsh.enable = true;
-  programs.hyprland.enable = true;
+  programs = {
+    ssh.startAgent = true;
+    zsh.enable = true;
+    hyprland.enable = true;
+  };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "25.05";
