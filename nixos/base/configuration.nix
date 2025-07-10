@@ -51,12 +51,8 @@
       psmisc
       adwaita-icon-theme
       librewolf
+      anyrun
       sddm-astronaut-patched
-      ulauncher
-      # fuzzel
-      # wofi
-      # j4-dmenu-desktop
-      # sleek-grub-theme-patched
       catppuccin-plymouth-patched
       home-manager
       git
