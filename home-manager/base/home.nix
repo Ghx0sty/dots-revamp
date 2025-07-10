@@ -44,7 +44,10 @@
   # Enable home-manager and git
   programs = {
     home-manager.enable = true;
-    rofi.enable = true;
+    rofi = {
+      enable = true;
+      package = pkgs.rofi-wayland-unwrapped;
+    };
 
     git = {
       enable = true;
