@@ -3,8 +3,8 @@
     enable = true;
     settings = {
       "$terminal" = "alacritty";
-      "$launcher-kill" = "pkill ulauncher";
-      "$launcher-start" = "ulauncher";
+      "$launcher-kill" = "pkill anyrun";
+      "$launcher-start" = "anyrun";
       "$browser" = "librewolf";
 
       "$mainmod" = "ALT";
