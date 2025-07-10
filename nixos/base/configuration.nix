@@ -51,7 +51,8 @@
       psmisc
       adwaita-icon-theme
       librewolf
-      onagre
+      walker
+      rofi-wayland
       sddm-astronaut-patched
       catppuccin-plymouth-patched
       home-manager

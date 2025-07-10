@@ -64,7 +64,7 @@
         nixos-sync = "sudo nixos-rebuild switch --flake ~/.nixdots#hackpc --use-remote-sudo && home-manager switch --flake ~/.nixdots#matt@hackpc";
         flake-update = "nix flake update --flake ~/.nixdots";
       };
-    };
+    }; 
 
     keychain = {
       enable = true;
