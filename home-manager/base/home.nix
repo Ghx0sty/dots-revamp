@@ -44,6 +44,7 @@
   # Enable home-manager and git
   programs = {
     home-manager.enable = true;
+    rofi.enable = true;
 
     git = {
       enable = true;
