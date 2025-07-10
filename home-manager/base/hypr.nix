@@ -3,8 +3,8 @@
     enable = true;
     settings = {
       "$terminal" = "alacritty";
-      "$launcher-kill" = "pkill onagre";
-      "$launcher-start" = "onagre";
+      "$launcher-kill" = "pkill rofi";
+      "$launcher-start" = "rofi -show drun";
       "$browser" = "librewolf";
 
       "$mainmod" = "ALT";

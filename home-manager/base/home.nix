@@ -47,7 +47,7 @@
     rofi = {
       enable = true;
       package = pkgs.rofi-wayland-unwrapped;
-      theme = "launchpad";
+      theme = "Arc-Darker";
     };
 
     git = {
