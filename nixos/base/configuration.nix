@@ -51,7 +51,7 @@
       psmisc
       adwaita-icon-theme
       librewolf
-      anyrun
+      onagre
       sddm-astronaut-patched
       catppuccin-plymouth-patched
       home-manager
