@@ -89,6 +89,7 @@
   };
 
   # Bit of home-manager here
+  # TODO: Remember to remove the home-manager aspect from base later
   home-manager = {
     extraSpecialArgs = {inherit inputs outputs;};
     users = {
