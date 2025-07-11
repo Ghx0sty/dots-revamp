@@ -88,6 +88,16 @@
     };
   };
 
+  # Bit of home-manager here
+  # TODO: Remember to remove the home-manager aspect from base later
+  home-manager = {
+    extraSpecialArgs = {inherit inputs outputs;};
+    users = {
+      # Import your home-manager configuration
+      matt = import ../../home-manager/base/home.nix;
+    };
+  };
+
   # Going to put services here:
   services = {
     openssh.enable = true;

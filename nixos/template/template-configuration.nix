@@ -57,13 +57,13 @@
   };
 
   # Bit of home-manager here
-  # home-manager = {
-    # extraSpecialArgs = {inherit inputs outputs;};
-    # users = {
+  home-manager = {
+    extraSpecialArgs = {inherit inputs outputs;};
+    users = {
       # Import your home-manager configuration
-    # matt = import ../../home-manager/template/template-home.nix;
-    # };
-  # };
+      matt = import ../../home-manager/template/template-home.nix;
+    };
+  };
 
   # Going to put services here:
   services = {

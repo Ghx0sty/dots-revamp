@@ -70,9 +70,9 @@
           ./nixos/base/configuration.nix
           # Disko shenanigans go here?
           disko.nixosModules.disko
-          ./disko/mattpc/mattpc-disko.nix
+          ./disko/mattpc/disko-mattpc.nix
           # Adding home-manager support here
-          # home-manager.nixosModules.home-manager
+          home-manager.nixosModules.home-manager
         ];
       };
     };
