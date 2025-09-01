@@ -71,9 +71,8 @@
           # > Our main nixos configuration file <
           ./nixos/base/configuration.nix
           # Disko shenanigans go here?
-          disko.nixosModules.disko {
-            disko.devices = import ./disko/mattpc/mattpc-disko.nix;
-          }
+          disko.nixosModules.disko
+          ./disko/mattpc/mattpc-disko.nix
           # Adding home-manager support here
           home-manager.nixosModules.home-manager
         ];
