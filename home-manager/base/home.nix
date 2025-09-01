@@ -22,7 +22,7 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
-    # ./hypr.nix
+    ./hypr.nix
   ];
 
   # Nixpkgs configuration moved to flake.nix
@@ -45,11 +45,11 @@
   # Enable home-manager and git
   programs = {
     home-manager.enable = true;
-    #rofi = {
-    #  enable = true;
-    #  package = pkgs.rofi-wayland-unwrapped;
-    #  theme = "Arc-Dark";
-    #};
+    rofi = {
+      enable = true;
+      package = pkgs.rofi-wayland-unwrapped;
+      theme = "Arc-Dark";
+    };
 
     git = {
       enable = true;
@@ -98,18 +98,18 @@
     };
   };
 
-  illogical-impulse = {
-    enable = true;
-    hyprland = {
-      package = pkgs.hyprland;
-      xdgPortalPackage = pkgs.xdg-desktop-portal-hyprland;
-      ozoneWayland.enable = true;
-    };
-    dotfiles = {
-      kitty.enable = true;
-      fish.enable = true;
-    };
-  };
+  #illogical-impulse = {
+  #  enable = true;
+  #  hyprland = {
+  #    package = pkgs.hyprland;
+  #    xdgPortalPackage = pkgs.xdg-desktop-portal-hyprland;
+  #    ozoneWayland.enable = true;
+  #  };
+  #  dotfiles = {
+  #    kitty.enable = true;
+  #    fish.enable = true;
+  #  };
+  #};
   
 
   # Nicely reload system units when changing configs
