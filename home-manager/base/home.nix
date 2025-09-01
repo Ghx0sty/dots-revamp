@@ -101,13 +101,13 @@
   illogical-impulse = {
     enable = true;
     hyprland = {
-      # package = pkgs.hyprland;
-      # xdgPortalPackage = pkgs.xdg-desktop-portal-hyprland;
+      package = pkgs.hyprland;
+      xdgPortalPackage = pkgs.xdg-desktop-portal-hyprland;
       ozoneWayland.enable = true;
     };
     dotfiles = {
-      # kitty.enable = true;
-      # fish.enable = true;
+      kitty.enable = true;
+      fish.enable = true;
     };
   };
   
