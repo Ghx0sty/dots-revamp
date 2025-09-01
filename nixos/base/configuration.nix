@@ -22,6 +22,8 @@
     # You can also split up your configuration and import pieces of it here:
     # ./users.nix
 
+    # Disko moved to host-specific
+
     # Import your generated (nixos-generate-config) hardware configuration
     ./hardware-configuration.nix
   ];
@@ -100,7 +102,7 @@
     };
   };
 
-  # Going to put services here:
+  # Services to be deployed across hosts:
   services = {
     openssh.enable = true;
     xserver = {

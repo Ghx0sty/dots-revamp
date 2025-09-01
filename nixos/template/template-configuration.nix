@@ -31,20 +31,18 @@
 
   environment = {
     systemPackages = with pkgs; [
-      # Drop your host packages here
+      # Drop your host-specific packages here
       nano
-      htop
-      steam
     ];
   };
 
   # TODO: Set a hostname
-  networking.hostName = "template";
+  networking.hostName = "template-host";
 
   # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
   users.users = {
     # TODO: Replace with your username
-    matt = {
+    template-user = {
       # TODO: You can set an initial password for your user.
       # If you do, you can skip setting a root password by passing '--no-root-passwd' to nixos-install.
       # Be sure to change it (using passwd) after rebooting!
@@ -57,48 +55,23 @@
   };
 
   # Bit of home-manager here
+  # TODO: Replace below user with host's main user. Can be any user from home-manager/users
   home-manager = {
     extraSpecialArgs = {inherit inputs outputs;};
     users = {
       # Import your home-manager configuration
-      matt = import ../../home-manager/template/template-home.nix;
+      template-user = import ../../home-manager/template/template-home.nix;
     };
   };
 
-  # Going to put services here:
+  # Host-specific services:
   services = {
-    openssh.enable = true;
-    xserver = {
-      enable = true;
-      displayManager = {
-        setupCommands = "${pkgs.xorg.xrandr}/bin/xrandr -s 1920x1080";
-      };
-    };
-    displayManager = {
-      sddm = {
-        enable = true;
-        theme = "sddm-astronaut-theme";
-        package = pkgs.kdePackages.sddm;
-        extraPackages = with pkgs; [
-          sddm-astronaut-patched
-        ];
-        settings = {
-          General = {
-            CursorTheme = "Breeze_Hacked";
-          };
-        };
-      };
-      defaultSession = "hyprland";
-    };
   };
 
-  # And programs here:
+  # Host-specific programs to add:
   programs = {
-    ssh.startAgent = true;
-    zsh.enable = true;
-    hyprland.enable = true;
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  system.stateVersion = "25.05";
+  # Stable state version is synced across all systems
 }
