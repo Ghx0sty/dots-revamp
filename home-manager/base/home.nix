@@ -45,11 +45,11 @@
   # Enable home-manager and git
   programs = {
     home-manager.enable = true;
-    rofi = {
-      enable = true;
-      package = pkgs.rofi-wayland-unwrapped;
-      theme = "Arc-Dark";
-    };
+    #rofi = {
+    #  enable = true;
+    #  package = pkgs.rofi-wayland-unwrapped;
+    #  theme = "Arc-Dark";
+    #};
 
     git = {
       enable = true;
