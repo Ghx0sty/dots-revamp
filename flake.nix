@@ -15,6 +15,8 @@
     # Added some Disko config stuff right here
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
+    # End4 Nix Dots
+    illogical-impulse.url = "github:xBLACKICEx/end-4-dots-hyprland-nixos";
   };
 
   outputs = {

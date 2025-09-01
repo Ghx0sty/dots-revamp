@@ -17,6 +17,7 @@
     # Or modules from other flakes (such as nixos-hardware):
     # inputs.hardware.nixosModules.common-cpu-amd
     # inputs.hardware.nixosModules.common-ssd
+    # inputs.illogical-impulse.homeManagerModules.default
 
     # You can also split up your configuration and import pieces of it here:
     # ./users.nix
@@ -121,7 +122,7 @@
           };
         };
       };
-      defaultSession = "hyprland";
+      # defaultSession = "hyprland";
     };
   };
 
@@ -129,7 +130,7 @@
   programs = {
     ssh.startAgent = true;
     zsh.enable = true;
-    hyprland.enable = true;
+    # hyprland.enable = false;
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion

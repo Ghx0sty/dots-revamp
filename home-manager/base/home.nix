@@ -15,6 +15,7 @@
     # outputs.homeManagerModules.pullSyncHome
     outputs.homeManagerModules.githubSync
     # outputs.homeManagerModules.test
+    # inputs.illogical-impulse.homeManagerModules.default
 
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default
@@ -96,6 +97,20 @@
       };
     };
   };
+
+  #illogical-impulse = {
+  #  enable = true;
+  #  hyprland = {
+  #    package = pkgs.hyprland;
+  #    xdgPortalPackage = pkgs.xdg-desktop-portal-hyprland;
+  #    ozoneWayland.enable = true;
+  #  };
+  #  dotfiles = {
+  #    kitty.enable = true;
+  #    fish.enable = true;
+  #  };
+  #};
+  
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = true;
