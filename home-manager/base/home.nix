@@ -22,7 +22,7 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
-    ./hypr.nix
+    # ./hypr.nix
   ];
 
   # Nixpkgs configuration moved to flake.nix
