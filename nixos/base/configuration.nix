@@ -122,7 +122,7 @@
           };
         };
       };
-      # defaultSession = "hyprland";
+      defaultSession = "hyprland";
     };
   };
 
@@ -130,7 +130,7 @@
   programs = {
     ssh.startAgent = true;
     zsh.enable = true;
-    # hyprland.enable = false;
+    hyprland.enable = true;
   };
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
