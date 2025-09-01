@@ -49,6 +49,7 @@
 
   environment = {
     systemPackages = with pkgs; [
+      disko
       psmisc
       adwaita-icon-theme
       librewolf
