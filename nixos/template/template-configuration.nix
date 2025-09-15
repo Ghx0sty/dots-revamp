@@ -74,4 +74,5 @@
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   # Stable state version is synced across all systems
+  # State is established in base.nix
 }
