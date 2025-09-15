@@ -67,7 +67,7 @@
       shellAliases = {
         home-sync = "home-manager switch --flake ~/.nixdots#matt@hackpc";
         nixos-switch = "sudo nixos-rebuild switch --flake ~/.nixdots#hackpc --use-remote-sudo";
-        nixos-sync = "sudo nixos-rebuild switch --flake ~/.nixdots#hackpc --use-remote-sudo && home-manager switch --flake ~/.nixdots#matt@hackpc";
+        nixos-sync = "home-manager switch --flake ~/.nixdots#matt@hackpc && sudo nixos-rebuild switch --flake ~/.nixdots#hackpc --use-remote-sudo";
         flake-update = "nix flake update --flake ~/.nixdots";
       };
     }; 
@@ -96,21 +96,7 @@
         };
       };
     };
-  };
-
-  #illogical-impulse = {
-  #  enable = true;
-  #  hyprland = {
-  #    package = pkgs.hyprland;
-  #    xdgPortalPackage = pkgs.xdg-desktop-portal-hyprland;
-  #    ozoneWayland.enable = true;
-  #  };
-  #  dotfiles = {
-  #    kitty.enable = true;
-  #    fish.enable = true;
-  #  };
-  #};
-  
+  }; 
 
   # Nicely reload system units when changing configs
   systemd.user.startServices = true;

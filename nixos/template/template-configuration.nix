@@ -18,7 +18,7 @@
     # inputs.hardware.nixosModules.common-ssd
 
     # Hardware configuration for current host:
-    ./hardware-configuration-template.nix
+    ./template-hardware-configuration.nix
 
     # Disko for current host:
     inputs.disko.nixosModules.disko
