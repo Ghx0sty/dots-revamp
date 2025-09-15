@@ -59,6 +59,7 @@
       hackpc = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [
+          ./pkgs.nix
           # Nixpkgs injection for overlays
           { nixpkgs = {
             overlays = [ 

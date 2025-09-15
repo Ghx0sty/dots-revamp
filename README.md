@@ -25,3 +25,7 @@ Using the "standard" preset
 - Users can be reused across hosts
 - There is no base home.nix
 
+
+# WIP Scratchpad:
+## Refactoring of pkgs.nix
+- Need to continue doing pkgs.nix and rubbing it out from the flake.nix
