@@ -38,8 +38,8 @@
       keychain
     ];
     file = {
-      # ".local/share/fonts".source = "${outputs.rofiThemes}/fonts";
-      # ".config/rofi".source = "${outputs.rofiThemes}/files";
+      ".local/share/fonts".source = "${outputs.rofiThemes}/fonts";
+      ".config/rofi".source = "${outputs.rofiThemes}/files";
     };
   };
 
@@ -50,7 +50,7 @@
   programs = {
     home-manager.enable = true;
     rofi = {
-      enable = true;
+      enable = false;
       package = pkgs.rofi-wayland-unwrapped;
       # theme = "Arc-Dark";
     };
