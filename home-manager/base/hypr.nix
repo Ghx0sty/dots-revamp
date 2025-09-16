@@ -4,7 +4,7 @@
     settings = {
       "$terminal" = "alacritty";
       "$launcher-kill" = "pkill rofi";
-      "$launcher-start" = "rofi -show drun";
+      "$launcher-start" = "../../../.config/rofi/scripts/launcher_t6";
       "$browser" = "librewolf";
 
       "$mainmod" = "ALT";
