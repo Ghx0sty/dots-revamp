@@ -125,7 +125,7 @@
           };
         };
       };
-      defaultSession = "hyprland";
+      defaultSession = "hyprland-uwsm";
     };
   };
 
@@ -133,7 +133,11 @@
   programs = {
     ssh.startAgent = true;
     zsh.enable = true;
-    hyprland.enable = true;
+    hyprland = {
+      enable = true;
+      withUWSM = true;
+      xwayland.enable = true;
+    };
   };
   
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
