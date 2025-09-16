@@ -37,6 +37,10 @@
       lunarvim
       keychain
     ];
+    file = {
+      # ".local/share/fonts".source = "${outputs.rofiThemes}/fonts";
+      # ".config/rofi".source = "${outputs.rofiThemes}/files";
+    };
   };
 
   # Add stuff for your user as you see fit:
@@ -48,7 +52,7 @@
     rofi = {
       enable = true;
       package = pkgs.rofi-wayland-unwrapped;
-      theme = "Arc-Dark";
+      # theme = "Arc-Dark";
     };
 
     git = {

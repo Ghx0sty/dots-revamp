@@ -52,6 +52,10 @@
     # These are usually stuff you would upstream into home-manager
     homeManagerModules = import ./modules/home-manager;
 
+    rofiThemes = builtins.fetchGit {
+      url = "https://github.com/adi1090x/rofi";
+      rev = "d6ae47205a375108f7fc7c96b6dc9d647951dcad";
+    };
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {

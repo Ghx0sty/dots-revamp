@@ -60,9 +60,12 @@
       sddm-astronaut-patched
       catppuccin-plymouth-patched
       home-manager
+      nwg-look
+      nwg-launchers
       git
       zsh
       alacritty
+      kitty
       xorg.xrandr
       breeze-hacked-cursor-theme
       plymouth
