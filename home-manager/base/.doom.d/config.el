@@ -1,1 +1,1 @@
-(setq doom-theme 'doom-outrun-electric doom-font (font-spec :family "RobotMono Nerd Font" :weight `medium :size 11.0))
+(setq doom-theme 'doom-outrun-electric doom-font (font-spec :family "RobotoMono Nerd Font" :weight `medium :size 11.0))
