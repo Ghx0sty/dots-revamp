@@ -17,6 +17,9 @@
     disko.inputs.nixpkgs.follows = "nixpkgs";
     # End4 Nix Dots
     illogical-impulse.url = "github:xBLACKICEx/end-4-dots-hyprland-nixos";
+    # Doom Emacs which is apparently broken
+    nix-doom-emacs-unstraightened.url = "github:marienz/nix-doom-emacs-unstraightened";
+    nix-doom-emacs-unstraightened.inputs.nixpkgs.follows = "";
   };
 
   outputs = {
@@ -25,6 +28,7 @@
     home-manager,
     disko,
     nixpkgs-unstable,
+    nix-doom-emacs-unstraightened,
     ...
   } @ inputs: let
     inherit (self) outputs;

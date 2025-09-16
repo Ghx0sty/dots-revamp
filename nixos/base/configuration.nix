@@ -56,6 +56,7 @@
       adwaita-icon-theme
       librewolf
       walker
+      wl-clipboard
       rofi-wayland
       sddm-astronaut-patched
       catppuccin-plymouth-patched

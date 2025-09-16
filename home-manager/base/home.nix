@@ -16,6 +16,7 @@
     outputs.homeManagerModules.githubSync
     # outputs.homeManagerModules.test
     inputs.illogical-impulse.homeManagerModules.default
+    inputs.nix-doom-emacs-unstraightened.hmModule
 
     # Or modules exported from other flakes (such as nix-colors):
     # inputs.nix-colors.homeManagerModules.default
@@ -53,6 +54,11 @@
       enable = false;
       package = pkgs.rofi-wayland-unwrapped;
       # theme = "Arc-Dark";
+    };
+
+    doom-emacs = {
+      enable = true;
+      doomDir = ./.doom.d;
     };
 
     git = {
