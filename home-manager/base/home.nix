@@ -34,6 +34,7 @@
     homeDirectory = "/home/matt";
     stateVersion = "25.05";
     packages = with pkgs; [
+      nil
       neofetch
       lunarvim
       keychain
